@@ -6,6 +6,9 @@ Author/site shown on source page: Liyuan Zha, "Millimeter-wave IC Design Learnin
 
 Captured as study notes on 2026-07-23. This file is an attributed summary and workflow checklist, not a full mirror of the original post or its images.
 
+Source recovery links and identifying metadata are kept in
+[EMX Source Preservation Record](emx_source_preservation.md).
+
 ## Scope
 
 The source article is a practical EMX learning record covering:
@@ -165,4 +168,3 @@ Practical workflow:
 - The EMX flow is conceptually similar to the PeakView Layout EM flow we used: both need careful port definition, process stack verification, output S-parameter preservation, and Cadence nport/config integration.
 - The most useful transfer into our workflow is the checklist discipline: verify stack, port order, S-parameter path, generated model view, and testbench view binding before comparing L/Q/R or circuit-level AC results.
 - For generated inductors in `Codex_Lib`, keep a small metadata file next to each generated passive model recording frequency range, process/profile, port order, and S-parameter location.
-
