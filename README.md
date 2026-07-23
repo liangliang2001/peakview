@@ -35,8 +35,12 @@ It talks to the remote Linux/Cadence session through the existing
 loaded in CIW:
 
 ```lisp
-load("/tmp/virtuoso_bridge_user/virtuoso_bridge/virtuoso_setup.il")
+load("/tmp/virtuoso_bridge_zhaoliang_2/virtuoso_bridge/virtuoso_setup.il")
 ```
+
+## Study Notes
+
+- [EMX learning notes from "Introduction to EMX"](docs/emx_introduction_learning_notes.md)
 
 ## Quick Checks
 
@@ -120,7 +124,7 @@ python .\peakview_tool\peakview_tool.py design `
 
 The default project/profile/library are the ones validated in this thread:
 
-- Project: `/T22_Codex/Codex_Lib/.peakview`
+- Project: `/mnt/data/OEIC/zhaoliang_2/T22_Codex/Codex_Lib/.peakview`
 - Profile: `RC_IRCX_CLN22ULP_1P8M+UT-ALRDL_5X1Z1U_typical(DRM:T-N22-CL-DR-001 v1.5)`
 - Cadence library: `Codex_Lib`
 
@@ -193,41 +197,3 @@ rings, slots, and metal fill structures.
   links the generated nport `text.txt`.
 - The tool extracts default formulas for `Ld(1,2)`, `Qd(1,2)`, `Rse(1,2)`,
   `Lse(1,2)`, and `Qse(1,2)`. Add more formulas with repeated `--formula`.
-
-
-# PeakView Automation Workspace
-
-This repository contains a validated PeakView/PeakDesign automation helper for
-the T22 Cadence environment used in this workspace.
-
-The main tool lives in `peakview_tool/` and can:
-
-- connect to the running `virtuoso-bridge-lite-main` session
-- open the validated PeakView project/profile
-- create and simulate PeakView PCircuit devices
-- browse the live PCircuit model catalog
-- call the documented PeakView Script API through JSON recipes
-- generate and load Cadence sync SKILL into `Codex_Lib`
-- plot extracted L/Q/R results
-
-See `peakview_tool/README.md` for usage examples and the validated API surface.
-
-## Validated Environment
-
-- PeakView project:
-  `/path_to_cadence_lib/Codex_Lib/.peakview`
-- Cadence library: `Codex_Lib`
-- Profile:
-  `RC_IRCX_CLN22ULP_1P8M+UT-ALRDL_5X1Z1U_typical(DRM:T-N22-CL-DR-001 v1.5)`
-- Bridge setup in Virtuoso CIW:
-  `load("/tmp/virtuoso_bridge_user/virtuoso_bridge/virtuoso_setup.il")`
-
-## Validation Artifacts
-
-The root-level JSON and PNG files are captured validation runs from the tool
-development session, including:
-
-- `AdvOctSymmetric` generation and 1-100 GHz simulation
-- `IND_test_LDM` Layout EM simulation
-- sweep mode comparison for RFIC high, Adaptive MMWHigh, and AFS off
-- Cadence/Spectre nport testbench comparison against PeakView EM results
