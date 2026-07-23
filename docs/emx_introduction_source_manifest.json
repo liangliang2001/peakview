@@ -7,8 +7,12 @@
   "source_last_verified_at": "2026-07-23",
   "source_site_archive": "https://baikal2411.github.io/archives/",
   "source_author_github": "https://github.com/baikal2411",
+  "source_repository": "https://github.com/baikal2411/baikal2411.github.io",
   "internet_archive_lookup": "https://web.archive.org/web/*/https://baikal2411.github.io/2025/04/15/Introduction-to-EMX/",
   "preservation_record": "emx_source_preservation.md",
-  "stored_as": "attributed learning notes and workflow checklist",
-  "copyright_handling": "No explicit redistribution license was observed, so this workspace stores a summary/checklist rather than a full article mirror or copied images."
+  "authorized_copy": "emx_full_copy/article.md",
+  "original_html_snapshot": "emx_full_copy/site/index.html",
+  "authorization_record": "On 2026-07-23, the peakview_tool repository maintainer reported obtaining the author's permission to copy and modify the article.",
+  "stored_as": "authorized attributed full copy, original HTML snapshot, local image assets, and learning notes",
+  "copyright_handling": "The source page does not publish an explicit redistribution license. The full copy was added after the repository maintainer reported receiving direct authorization from the author. Attribution and the original link are retained."
 }

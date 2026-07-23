@@ -1,0 +1,1645 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="zh-CN">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="https://fonts.loli.net/css?family=Noto Serif SC:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="这篇文章主要记录EMX的基本操作">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Introduction to EMX">
+<meta property="og:url" content="https://baikal2411.github.io/2025/04/15/Introduction-to-EMX/index.html">
+<meta property="og:site_name" content="Millimeter-wave IC Design Learning Road">
+<meta property="og:description" content="这篇文章主要记录EMX的基本操作">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://baikal2411.github.io/2025/04/15/Introduction-to-EMX/image-20250323113629439.png">
+<meta property="og:image" content="https://baikal2411.github.io/2025/04/15/Introduction-to-EMX/image-20250323115048584.png">
+<meta property="og:image" content="https://baikal2411.github.io/2025/04/15/Introduction-to-EMX/image-20250323115131667.png">
+<meta property="og:image" content="https://baikal2411.github.io/2025/04/15/Introduction-to-EMX/image-20250323115340271.png">
+<meta property="og:image" content="https://baikal2411.github.io/2025/04/15/Introduction-to-EMX/image-20250323115543190.png">
+<meta property="og:image" content="https://baikal2411.github.io/2025/04/15/Introduction-to-EMX/image-20250323115717592.png">
+<meta property="og:image" content="https://baikal2411.github.io/2025/04/15/Introduction-to-EMX/image-20250323115837922.png">
+<meta property="og:image" content="https://baikal2411.github.io/2025/04/15/Introduction-to-EMX/image-20250323120045802.png">
+<meta property="og:image" content="https://baikal2411.github.io/2025/04/15/Introduction-to-EMX/image-20250323120157295.png">
+<meta property="og:image" content="https://baikal2411.github.io/2025/04/15/Introduction-to-EMX/image-20250323120504321.png">
+<meta property="og:image" content="https://baikal2411.github.io/2025/04/15/Introduction-to-EMX/image-20250323120631363.png">
+<meta property="og:image" content="https://baikal2411.github.io/2025/04/15/Introduction-to-EMX/image-20250323120739005.png">
+<meta property="og:image" content="https://baikal2411.github.io/2025/04/15/Introduction-to-EMX/image-20250323121237508.png">
+<meta property="og:image" content="https://baikal2411.github.io/2025/04/15/Introduction-to-EMX/image-20250323122033417.png">
+<meta property="og:image" content="https://baikal2411.github.io/2025/04/15/Introduction-to-EMX/image-20250323122045129.png">
+<meta property="og:image" content="https://baikal2411.github.io/2025/04/15/Introduction-to-EMX/image-20250323122155189.png">
+<meta property="og:image" content="https://baikal2411.github.io/2025/04/15/Introduction-to-EMX/image-20250323122357874.png">
+<meta property="og:image" content="https://baikal2411.github.io/2025/04/15/Introduction-to-EMX/image-20250323122408688.png">
+<meta property="og:image" content="https://baikal2411.github.io/2025/04/15/Introduction-to-EMX/image-20250323123335329.png">
+<meta property="og:image" content="https://baikal2411.github.io/2025/04/15/Introduction-to-EMX/image-20250323124005141.png">
+<meta property="og:image" content="https://baikal2411.github.io/2025/04/15/Introduction-to-EMX/image-20250323130842650.png">
+<meta property="og:image" content="https://baikal2411.github.io/2025/04/15/Introduction-to-EMX/image-20250323132433975.png">
+<meta property="og:image" content="https://baikal2411.github.io/2025/04/15/Introduction-to-EMX/image-20250323132547803.png">
+<meta property="og:image" content="https://baikal2411.github.io/2025/04/15/Introduction-to-EMX/image-20250323133057463.png">
+<meta property="og:image" content="https://baikal2411.github.io/2025/04/15/Introduction-to-EMX/image-20250323134348755.png">
+<meta property="og:image" content="https://baikal2411.github.io/2025/04/15/Introduction-to-EMX/image-20250323134335033.png">
+<meta property="og:image" content="https://baikal2411.github.io/2025/04/15/Introduction-to-EMX/image-20250323134641241.png">
+<meta property="og:image" content="https://baikal2411.github.io/2025/04/15/Introduction-to-EMX/image-20250323134844773.png">
+<meta property="og:image" content="https://baikal2411.github.io/2025/04/15/Introduction-to-EMX/image-20250323134908599.png">
+<meta property="og:image" content="https://baikal2411.github.io/2025/04/15/Introduction-to-EMX/image-20250323135156983.png">
+<meta property="og:image" content="https://baikal2411.github.io/2025/04/15/Introduction-to-EMX/image-20250323135637072.png">
+<meta property="og:image" content="https://baikal2411.github.io/2025/04/15/Introduction-to-EMX/image-20250323140056345.png">
+<meta property="og:image" content="https://baikal2411.github.io/2025/04/15/Introduction-to-EMX/image-20250323140129941.png">
+<meta property="og:image" content="https://baikal2411.github.io/2025/04/15/Introduction-to-EMX/image-20250323140152924.png">
+<meta property="og:image" content="https://baikal2411.github.io/2025/04/15/Introduction-to-EMX/image-20250323140625861.png">
+<meta property="og:image" content="https://baikal2411.github.io/2025/04/15/Introduction-to-EMX/image-20250323140937195.png">
+<meta property="og:image" content="https://baikal2411.github.io/2025/04/15/Introduction-to-EMX/image-20250323141048573.png">
+<meta property="og:image" content="https://baikal2411.github.io/2025/04/15/Introduction-to-EMX/image-20250323141224596.png">
+<meta property="og:image" content="https://baikal2411.github.io/2025/04/15/Introduction-to-EMX/image-20250323141417304.png">
+<meta property="og:image" content="https://baikal2411.github.io/2025/04/15/Introduction-to-EMX/image-20250323141454427.png">
+<meta property="og:image" content="https://baikal2411.github.io/2025/04/15/Introduction-to-EMX/image-20250323141552308.png">
+<meta property="og:image" content="https://baikal2411.github.io/2025/04/15/Introduction-to-EMX/image-20250323141757451.png">
+<meta property="og:image" content="https://baikal2411.github.io/2025/04/15/Introduction-to-EMX/image-20250323141748562.png">
+<meta property="og:image" content="https://baikal2411.github.io/2025/04/15/Introduction-to-EMX/image-20250323142514244.png">
+<meta property="og:image" content="https://baikal2411.github.io/2025/04/15/Introduction-to-EMX/image-20250323142443364.png">
+<meta property="og:image" content="https://baikal2411.github.io/2025/04/15/Introduction-to-EMX/image-20250323151425425.png">
+<meta property="og:image" content="https://baikal2411.github.io/2025/04/15/Introduction-to-EMX/image-20250323151533457.png">
+<meta property="og:image" content="https://baikal2411.github.io/2025/04/15/Introduction-to-EMX/image-20250323151702210.png">
+<meta property="og:image" content="https://baikal2411.github.io/2025/04/15/Introduction-to-EMX/image-20250323152129853.png">
+<meta property="og:image" content="https://baikal2411.github.io/2025/04/15/Introduction-to-EMX/image-20250323152548262.png">
+<meta property="og:image" content="https://baikal2411.github.io/2025/04/15/Introduction-to-EMX/image-20250323152948601.png">
+<meta property="og:image" content="https://baikal2411.github.io/2025/04/15/Introduction-to-EMX/image-20250323153950536.png">
+<meta property="og:image" content="https://baikal2411.github.io/2025/04/15/Introduction-to-EMX/image-20250323154315545.png">
+<meta property="og:image" content="https://baikal2411.github.io/2025/04/15/Introduction-to-EMX/image-20250323155055004.png">
+<meta property="og:image" content="https://baikal2411.github.io/2025/04/15/Introduction-to-EMX/image-20250323155523582.png">
+<meta property="og:image" content="https://baikal2411.github.io/2025/04/15/Introduction-to-EMX/image-20250323155727574.png">
+<meta property="og:image" content="https://baikal2411.github.io/2025/04/15/Introduction-to-EMX/image-20250323155851853.png">
+<meta property="og:image" content="https://baikal2411.github.io/2025/04/15/Introduction-to-EMX/image-20250323160006825.png">
+<meta property="og:image" content="https://baikal2411.github.io/2025/04/15/Introduction-to-EMX/image-20250323160145999.png">
+<meta property="og:image" content="https://baikal2411.github.io/2025/04/15/Introduction-to-EMX/image-20250323160455990.png">
+<meta property="og:image" content="https://baikal2411.github.io/2025/04/15/Introduction-to-EMX/image-20250323160510090.png">
+<meta property="og:image" content="https://baikal2411.github.io/2025/04/15/Introduction-to-EMX/image-20250323160823936.png">
+<meta property="og:image" content="https://baikal2411.github.io/2025/04/15/Introduction-to-EMX/image-20250323160903595.png">
+<meta property="og:image" content="https://baikal2411.github.io/2025/04/15/Introduction-to-EMX/image-20250323160917145.png">
+<meta property="og:image" content="https://baikal2411.github.io/2025/04/15/Introduction-to-EMX/image-20250323162941900.png">
+<meta property="og:image" content="https://baikal2411.github.io/2025/04/15/Introduction-to-EMX/image-20250323163027683.png">
+<meta property="og:image" content="https://baikal2411.github.io/2025/04/15/Introduction-to-EMX/image-20250323164524100.png">
+<meta property="og:image" content="https://baikal2411.github.io/2025/04/15/Introduction-to-EMX/image-20250323164547989.png">
+<meta property="og:image" content="https://baikal2411.github.io/2025/04/15/Introduction-to-EMX/image-20250323164708392.png">
+<meta property="og:image" content="https://baikal2411.github.io/2025/04/15/Introduction-to-EMX/image-20250323165014559.png">
+<meta property="og:image" content="https://baikal2411.github.io/2025/04/15/Introduction-to-EMX/image-20250323165458668.png">
+<meta property="og:image" content="https://baikal2411.github.io/2025/04/15/Introduction-to-EMX/image-20250323165844510.png">
+<meta property="og:image" content="https://baikal2411.github.io/2025/04/15/Introduction-to-EMX/image-20250323165943185.png">
+<meta property="og:image" content="https://baikal2411.github.io/2025/04/15/Introduction-to-EMX/image-20250323170055353.png">
+<meta property="og:image" content="https://baikal2411.github.io/2025/04/15/Introduction-to-EMX/image-20250323170818549.png">
+<meta property="og:image" content="https://baikal2411.github.io/2025/04/15/Introduction-to-EMX/image-20250323171109337.png">
+<meta property="og:image" content="https://baikal2411.github.io/2025/04/15/Introduction-to-EMX/image-20250323171217744.png">
+<meta property="og:image" content="https://baikal2411.github.io/2025/04/15/Introduction-to-EMX/image-20250323171906515.png">
+<meta property="og:image" content="https://baikal2411.github.io/2025/04/15/Introduction-to-EMX/image-20250323172152204.png">
+<meta property="og:image" content="https://baikal2411.github.io/2025/04/15/Introduction-to-EMX/image-20250323172232210.png">
+<meta property="og:image" content="https://baikal2411.github.io/2025/04/15/Introduction-to-EMX/image-20250323172357335.png">
+<meta property="og:image" content="https://baikal2411.github.io/2025/04/15/Introduction-to-EMX/image-20250323172428915.png">
+<meta property="og:image" content="https://baikal2411.github.io/2025/04/15/Introduction-to-EMX/image-20250323211542305.png">
+<meta property="og:image" content="https://baikal2411.github.io/2025/04/15/Introduction-to-EMX/image-20250414202049230.png">
+<meta property="og:image" content="https://baikal2411.github.io/2025/04/15/Introduction-to-EMX/image-20250323212558464.png">
+<meta property="og:image" content="https://baikal2411.github.io/2025/04/15/Introduction-to-EMX/image-20250323212459822.png">
+<meta property="og:image" content="https://baikal2411.github.io/2025/04/15/Introduction-to-EMX/image-20250414150927361.png">
+<meta property="og:image" content="https://baikal2411.github.io/2025/04/15/Introduction-to-EMX/image-20250414150904488.png">
+<meta property="og:image" content="https://baikal2411.github.io/2025/04/15/Introduction-to-EMX/image-20250323213618660.png">
+<meta property="og:image" content="https://baikal2411.github.io/2025/04/15/Introduction-to-EMX/image-20250414152542644.png">
+<meta property="og:image" content="https://baikal2411.github.io/2025/04/15/Introduction-to-EMX/image-20250323235922107.png">
+<meta property="og:image" content="https://baikal2411.github.io/2025/04/15/Introduction-to-EMX/image-20250324000132913.png">
+<meta property="og:image" content="https://baikal2411.github.io/2025/04/15/Introduction-to-EMX/image-20250324000115118.png">
+<meta property="og:image" content="https://baikal2411.github.io/2025/04/15/Introduction-to-EMX/image-20250414152157611.png">
+<meta property="article:published_time" content="2025-04-15T15:43:34.000Z">
+<meta property="article:modified_time" content="2025-04-15T15:59:44.966Z">
+<meta property="article:author" content="Liyuan Zha">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://baikal2411.github.io/2025/04/15/Introduction-to-EMX/image-20250323113629439.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '',
+    scheme: 'Muse',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"hide","offset":12,"b2t":true,"scrollpercent":true,"onmobile":true},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://baikal2411.github.io/2025/04/15/Introduction-to-EMX/"/>
+
+
+
+
+
+  <title>Introduction to EMX | Millimeter-wave IC Design Learning Road</title>
+  
+
+
+
+
+
+
+
+
+<!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
+<!-- hexo injector head_end end --><meta name="generator" content="Hexo 7.3.0"><style>mjx-container[jax="SVG"] {
+  direction: ltr;
+}
+
+mjx-container[jax="SVG"] > svg {
+  overflow: visible;
+}
+
+mjx-container[jax="SVG"][display="true"] {
+  display: block;
+  text-align: center;
+  margin: 1em 0;
+}
+
+mjx-container[jax="SVG"][justify="left"] {
+  text-align: left;
+}
+
+mjx-container[jax="SVG"][justify="right"] {
+  text-align: right;
+}
+
+g[data-mml-node="merror"] > g {
+  fill: red;
+  stroke: red;
+}
+
+g[data-mml-node="merror"] > rect[data-background] {
+  fill: yellow;
+  stroke: none;
+}
+
+g[data-mml-node="mtable"] > line[data-line] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > rect[data-frame] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > .mjx-dashed {
+  stroke-dasharray: 140;
+}
+
+g[data-mml-node="mtable"] > .mjx-dotted {
+  stroke-linecap: round;
+  stroke-dasharray: 0,140;
+}
+
+g[data-mml-node="mtable"] > svg {
+  overflow: visible;
+}
+
+[jax="SVG"] mjx-tool {
+  display: inline-block;
+  position: relative;
+  width: 0;
+  height: 0;
+}
+
+[jax="SVG"] mjx-tool > mjx-tip {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+mjx-tool > mjx-tip {
+  display: inline-block;
+  padding: .2em;
+  border: 1px solid #888;
+  font-size: 70%;
+  background-color: #F8F8F8;
+  color: black;
+  box-shadow: 2px 2px 5px #AAAAAA;
+}
+
+g[data-mml-node="maction"][data-toggle] {
+  cursor: pointer;
+}
+
+mjx-status {
+  display: block;
+  position: fixed;
+  left: 1em;
+  bottom: 1em;
+  min-width: 25%;
+  padding: .2em .4em;
+  border: 1px solid #888;
+  font-size: 90%;
+  background-color: #F8F8F8;
+  color: black;
+}
+
+foreignObject[data-mjx-xml] {
+  font-family: initial;
+  line-height: normal;
+  overflow: visible;
+}
+
+.MathJax path {
+  stroke-width: 3;
+}
+
+mjx-container[display="true"] {
+  overflow: auto hidden;
+}
+
+mjx-container[display="true"] + br {
+  display: none;
+}
+</style></head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Millimeter-wave IC Design Learning Road</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">劝君莫惜金缕衣，劝君须取少年时。</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            About
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            Tags
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            Categories
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            Search
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="Searching..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://baikal2411.github.io/2025/04/15/Introduction-to-EMX/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/header.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Millimeter-wave IC Design Learning Road">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">Introduction to EMX</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2025-04-15T23:43:34+08:00">
+                2025-04-15
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  2.9k 字
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">预估阅读时间 &asymp;</span>
+                
+                <span title="预估阅读时间">
+                  10 分钟
+                </span>
+              
+            </div>
+          
+
+          
+              <div class="post-description">
+                  这篇文章主要记录EMX的基本操作
+              </div>
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <span id="more"></span>
+<h1><span id="emx学习记录">EMX学习记录</span></h1>
+<!-- toc -->
+<ul>
+<li><a href="#lecture-i-emx软件配置及其集成">Lecture Ⅰ
+EMX软件配置及其集成</a></li>
+<li><a href="#lecture-ii-emx仿真设置详解">Lecture Ⅱ
+EMX仿真设置详解</a></li>
+<li><a href="#lecture-iii-衬底文件的撰写-参考文件的选取">Lecture Ⅲ
+衬底文件的撰写--参考文件的选取</a>
+<ul>
+<li><a href="#层次定义">层次定义</a></li>
+<li><a href="#定义介质">定义介质</a></li>
+<li><a href="#定义空气层以及过孔层">定义空气层以及过孔层</a></li>
+<li><a href="#先进工艺的对比">先进工艺的对比</a></li>
+<li><a href="#特殊需求的解决">特殊需求的解决</a></li>
+</ul></li>
+<li><a href="#lecture-v-版图仿真以及黑盒的使用">Lecture Ⅴ
+版图仿真以及黑盒的使用</a>
+<ul>
+<li><a href="#基本仿真步骤">基本仿真步骤</a></li>
+<li><a href="#解决lvs检查不通过的方法-黑盒屏蔽">解决LVS检查不通过的方法--黑盒屏蔽</a></li>
+</ul></li>
+<li><a href="#lab使用rfic_gptemx对电感进行仿真">Lab：使用RFIC_GPT+EMX对电感进行仿真</a>
+<ul>
+<li><a href="#使用pdk进行电感的仿真28ghz">使用PDK进行电感的仿真（28GHz）</a></li>
+</ul></li>
+</ul>
+<!-- tocstop -->
+<h2><span id="lecture-iemx软件配置及其集成">Lecture Ⅰ
+EMX软件配置及其集成</span></h2>
+<p>预学习阶段：EMX和EXIR仿真教程</p>
+<p>设置仿真精度，比如高精度ADC的设置：</p>
+<p><img src="/2025/04/15/Introduction-to-EMX/image-20250323113629439.png" alt="image-20250323113629439" style="zoom:80%;"></p>
+<p>使用版本：EMX 6.1</p>
+<p>首先找到如下的文件夹目录：</p>
+<p><img src="/2025/04/15/Introduction-to-EMX/image-20250323115048584.png" alt="image-20250323115048584" style="zoom:50%;"></p>
+<p>其中包含配置文件：</p>
+<p><img src="/2025/04/15/Introduction-to-EMX/image-20250323115131667.png" alt="image-20250323115131667" style="zoom:80%;"></p>
+<p>第一个配置文件<em>emxconfig.il</em>包含如下的重要内容：</p>
+<p>路径配置<strong><em>EMX_interface_path</em></strong>：</p>
+<p><img src="/2025/04/15/Introduction-to-EMX/image-20250323115340271.png" alt="image-20250323115340271" style="zoom:80%;"></p>
+<p>多数配置采取默认配置，但以下几点要注意：</p>
+<p><em>查看模型文件配置为evince</em></p>
+<p><img src="/2025/04/15/Introduction-to-EMX/image-20250323115543190.png" alt="image-20250323115543190" style="zoom:80%;"></p>
+<p><em>查看诸如网格划分，电流分布的软件路径位于：</em></p>
+<p><img src="/2025/04/15/Introduction-to-EMX/image-20250323115717592.png" alt="image-20250323115717592" style="zoom:80%;"></p>
+<p><em>临时文件的保存</em></p>
+<p><img src="/2025/04/15/Introduction-to-EMX/image-20250323115837922.png" alt="image-20250323115837922" style="zoom:80%;"></p>
+<p><em>保存S参数的文件路径</em></p>
+<p><img src="/2025/04/15/Introduction-to-EMX/image-20250323120045802.png" alt="image-20250323120045802" style="zoom:80%;"></p>
+<p>这样配置可以防止数据被清空导致S参数文件丢失。</p>
+<p><em>黑箱参数配置为t</em></p>
+<p><img src="/2025/04/15/Introduction-to-EMX/image-20250323120157295.png" alt="image-20250323120157295" style="zoom:80%;"></p>
+<p><strong>如何加载EMX的这些脚本？</strong></p>
+<p>在virtuoso启动目录的.cdsinit文件中，.cdsinit文件的拷贝目录在：</p>
+<p><img src="/2025/04/15/Introduction-to-EMX/image-20250323120504321.png" alt="image-20250323120504321" style="zoom:80%;"></p>
+<p>调用calibre的接口：这里的接口文件是calibre提供的，会调用calibre的接口。</p>
+<p><img src="/2025/04/15/Introduction-to-EMX/image-20250323120631363.png" alt="image-20250323120631363" style="zoom:80%;"></p>
+<p>调用EMX的接口脚本：将上文提到的.il脚本加载进来即可。</p>
+<p><img src="/2025/04/15/Introduction-to-EMX/image-20250323120739005.png" alt="image-20250323120739005" style="zoom:80%;"></p>
+<p>在.cdsinit当中，还可以定义字体，快捷键等。</p>
+<p>打开ciw窗口以检测是否成功。当然还有license的配置。</p>
+<p><em>衬底文件的位置：</em></p>
+<p><img src="/2025/04/15/Introduction-to-EMX/image-20250323121237508.png" alt="image-20250323121237508" style="zoom:80%;"></p>
+<h2><span id="lecture-ii-emx仿真设置详解">Lecture Ⅱ EMX仿真设置详解</span></h2>
+<p><img src="/2025/04/15/Introduction-to-EMX/image-20250323122033417.png" alt="image-20250323122033417" style="zoom:80%;"></p>
+<p><img src="/2025/04/15/Introduction-to-EMX/image-20250323122045129.png" alt="image-20250323122045129" style="zoom:80%;"></p>
+<p><em>首先是process-衬底文件</em>，在process一栏按下回车，会弹出以下的窗口：</p>
+<p><img src="/2025/04/15/Introduction-to-EMX/image-20250323122155189.png" alt="image-20250323122155189" style="zoom:80%;"></p>
+<p>对于衬底文件应该做响应的检查，点击X-section的scaled弹出以下的界面：</p>
+<p><img src="/2025/04/15/Introduction-to-EMX/image-20250323122357874.png" alt="image-20250323122357874" style="zoom:80%;"></p>
+<p><img src="/2025/04/15/Introduction-to-EMX/image-20250323122408688.png" alt="image-20250323122408688" style="zoom:80%;"></p>
+<p>使用unscaled会查看到略缩图</p>
+<p>options里面是设定温度，密钥等。</p>
+<p>blackboxed cells作为屏蔽器件进行使用，以后会做介绍。</p>
+<p>layout view 是查看gds文件转为emx后的层次效果，比如这个电感：</p>
+<p><img src="/2025/04/15/Introduction-to-EMX/image-20250323123335329.png" alt="image-20250323123335329" style="zoom:50%;"></p>
+<p>在这个软件里面可以查看不同层次的情况（这里还没有tsmc65的衬底文件所以左边不对）</p>
+<p>查看例子当中的巴伦的设置：</p>
+<p><img src="/2025/04/15/Introduction-to-EMX/image-20250323124005141.png" alt="image-20250323124005141" style="zoom:50%;"></p>
+<p>可以查看对应的层次，端口，衬底等信息。</p>
+<p>SUB两端有##号是因为label放的位置的原因，对仿真无影响。</p>
+<p>放置端口，既可以放置PIN，也可以直接贴label</p>
+<p>Edge mesh
+一般设置为1，但是仿真mim电容等比较小的器件时需要相应减小，比如</p>
+<p>为例和电容的finger大小匹配需要设置为0.1</p>
+<p>Thickness默认参数就可以，它不同的设置与趋肤效应有关。</p>
+<p>Via merge
+是合并，会加快仿真速度，比如距离小于0.5um的过孔会被直接合并。</p>
+<p>3D metals ，设置*号代表所有都视为3D</p>
+<p>Signals添加label/pin，回车进行输入，其中的depth代表子电路的端口</p>
+<p>ground代表参考平面，EMX默认添加GND端口，注意端口的顺序会影响symbol的生成</p>
+<p>仿真频率设定仿真的频率范围</p>
+<p>点击Advanced，弹出以下对话框：</p>
+<p><img src="/2025/04/15/Introduction-to-EMX/image-20250323130842650.png" alt="image-20250323130842650" style="zoom:80%;"></p>
+<p>第一项，第二项是为过孔添加电容/电感模型（因为它们本身只包含电阻模型）若要全部添加则在框中添加*号即可。</p>
+<p>第二项是设置边界条件，通常情况下端口要放在金属边沿处，但是如果定义了内部的端口，那么</p>
+<p>电流直接从顶部注入而并非从边上注入。此处建议添加pin而不是label</p>
+<p>size是internal label的尺寸，如果勾选下方的cadence pins
+则是其尺寸。（建议pin）</p>
+<p>合并端口不要勾选，否则会短接。</p>
+<p>model一般使用RLC去拟合。</p>
+<p>CPU的数量如果设置0代表最多使用32个CPU，-1则是使用服务器所有的CPU</p>
+<p>memory设置：负数代表剩余值。具体见下图</p>
+<p><img src="/2025/04/15/Introduction-to-EMX/image-20250323132433975.png" alt="image-20250323132433975" style="zoom:80%;"></p>
+<p>输出选择s参数，touchstone等均选默认</p>
+<p>options可以实现多种功能，比如把网格划分导入matlab</p>
+<p><img src="/2025/04/15/Introduction-to-EMX/image-20250323132547803.png" alt="image-20250323132547803" style="zoom:80%;"></p>
+<p><strong><em>上述就是advanced
+options的大致介绍，接下来的选项：</em></strong></p>
+<p>其中的Type需要额外的关注。</p>
+<p><img src="/2025/04/15/Introduction-to-EMX/image-20250323133057463.png" alt="image-20250323133057463" style="zoom:80%;"></p>
+<p>这里的Results也可以进行选择，比如mod的选择就是会去对S参数进行拟合。mc是蒙特卡洛仿真</p>
+<p>仿真完成以后选择create model查看拟合的模型，create
+view生成symbol等</p>
+<p>最下方的clean up会将临时文件清空</p>
+<p><img src="/2025/04/15/Introduction-to-EMX/image-20250323134348755.png" alt="image-20250323134348755" style="zoom:50%;"></p>
+<p><img src="/2025/04/15/Introduction-to-EMX/image-20250323134335033.png" alt="image-20250323134335033" style="zoom: 67%;"></p>
+<p>选择正确的端口后进行仿真，内建参数的结果如上图所示</p>
+<p>生成模型，create model，拟合完成后选择new plot：</p>
+<p><img src="/2025/04/15/Introduction-to-EMX/image-20250323134641241.png" alt="image-20250323134641241" style="zoom:80%;"></p>
+<p>可以看出拟合的效果是比较好的。</p>
+<p>生成symbol ， schemetic，spara均可：</p>
+<p><img src="/2025/04/15/Introduction-to-EMX/image-20250323134844773.png" alt="image-20250323134844773" style="zoom:50%;"></p>
+<p><img src="/2025/04/15/Introduction-to-EMX/image-20250323134908599.png" alt="image-20250323134908599" style="zoom: 67%;"></p>
+<p><img src="/2025/04/15/Introduction-to-EMX/image-20250323135156983.png" alt="image-20250323135156983" style="zoom:50%;"></p>
+<p>nport的S参数文件指向存储的spara数据文件。</p>
+<h2><span id="lecture-iii衬底文件的撰写-参考文件的选取">Lecture Ⅲ
+衬底文件的撰写--参考文件的选取</span></h2>
+<p>语法规则见用户手册。</p>
+<p>需要用到的PDK提供的参数：</p>
+<p>以SMIC013为例：首先找到工艺库对应的docs，打开SP文件（也即最右边的那个）</p>
+<p><img src="/2025/04/15/Introduction-to-EMX/image-20250323135637072.png" alt="image-20250323135637072" style="zoom:80%;"></p>
+<p>找到目录当中的interconnections Models，对应了这里的第105页。</p>
+<p><strong>金属层信息：</strong></p>
+<p><img src="/2025/04/15/Introduction-to-EMX/image-20250323140056345.png" alt="image-20250323140056345" style="zoom:80%;"></p>
+<p><strong>介质层的信息：</strong></p>
+<p><img src="/2025/04/15/Introduction-to-EMX/image-20250323140129941.png" alt="image-20250323140129941" style="zoom:80%;"></p>
+<p>整体展示：</p>
+<p><img src="/2025/04/15/Introduction-to-EMX/image-20250323140152924.png" alt="image-20250323140152924" style="zoom:80%;"></p>
+<p>注意通孔的类型，比如CT通孔可能连接Poly也可能直接连接到NWELL。</p>
+<p>查看方阻参数：</p>
+<p><img src="/2025/04/15/Introduction-to-EMX/image-20250323140625861.png" alt="image-20250323140625861" style="zoom:80%;"></p>
+<p>对于射频电路等特殊电路，加厚层金属的信息：（在RM文件而并非SP文件）</p>
+<p><img src="/2025/04/15/Introduction-to-EMX/image-20250323140937195.png" alt="image-20250323140937195" style="zoom:80%;"></p>
+<p>对应的电阻模型参数：</p>
+<p><img src="/2025/04/15/Introduction-to-EMX/image-20250323141048573.png" alt="image-20250323141048573" style="zoom:80%;"></p>
+<p>对于寄生参数的文件：需要使用.ict文件，其目录见下：</p>
+<p><img src="/2025/04/15/Introduction-to-EMX/image-20250323141224596.png" alt="image-20250323141224596" style="zoom:80%;"></p>
+<p>里面包含了金属层，介质层，过孔的信息：</p>
+<p><img src="/2025/04/15/Introduction-to-EMX/image-20250323141417304.png" alt="image-20250323141417304" style="zoom:80%;"></p>
+<p><img src="/2025/04/15/Introduction-to-EMX/image-20250323141454427.png" alt="image-20250323141454427" style="zoom:50%;"></p>
+<p>另外需要注意的就是<strong>这个.itf文件</strong>了，它是按照晶圆的结构撰写的：（层次化）</p>
+<p><img src="/2025/04/15/Introduction-to-EMX/image-20250323141552308.png" alt="image-20250323141552308" style="zoom:80%;"></p>
+<p>在calibre当中也有相应的文件：</p>
+<p><img src="/2025/04/15/Introduction-to-EMX/image-20250323141757451.png" alt="image-20250323141757451" style="zoom:80%;"></p>
+<p><img src="/2025/04/15/Introduction-to-EMX/image-20250323141748562.png" alt="image-20250323141748562" style="zoom:80%;"></p>
+<p>与.ict文件区别在于，这里的顺序是反相的，从介质层开始定义。</p>
+<p>有一些工艺没有.mipt文件，它的这个文件放在寄生参数的rule里面，比如有些TSMC的信息会放在<strong>最顶上被注释掉</strong></p>
+<p>65nm的信息如下：</p>
+<p><img src="/2025/04/15/Introduction-to-EMX/image-20250323142514244.png" alt="image-20250323142514244" style="zoom:50%;"></p>
+<p><img src="/2025/04/15/Introduction-to-EMX/image-20250323142443364.png" alt="image-20250323142443364" style="zoom:80%;"></p>
+<p>总体而言，首先定义缩放率，单位，再定义各个层</p>
+<p><img src="/2025/04/15/Introduction-to-EMX/image-20250323151425425.png" alt="image-20250323151425425" style="zoom:80%;"></p>
+<p>详细介绍：</p>
+<h4><span id="层次定义">层次定义</span></h4>
+<p><img src="/2025/04/15/Introduction-to-EMX/image-20250323151533457.png" alt="image-20250323151533457" style="zoom:80%;"></p>
+<p>如何找到层次定义？找到layermap文件（层次定义文件）定义了层号以及用途</p>
+<p><img src="/2025/04/15/Introduction-to-EMX/image-20250323151702210.png" alt="image-20250323151702210" style="zoom:80%;"></p>
+<p>fill（）函数与metal
+dummy有关，比如fillsize为1的时候，进行EMX仿真时会将其忽略，如果不想忽略任何版图上的东西，将fillsize设置为0即可。当然，也可以为每一层设定过滤参数。</p>
+<p><img src="/2025/04/15/Introduction-to-EMX/image-20250323152129853.png" alt="image-20250323152129853" style="zoom:80%;"></p>
+<p>比如ALPA的类型是0，层号是83，则其是<span class="math inline"><mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.05ex;" xmlns="http://www.w3.org/2000/svg" width="4.885ex" height="1.62ex" role="img" focusable="false" viewbox="0 -694 2159 716"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D459" d="M117 59Q117 26 142 26Q179 26 205 131Q211 151 215 152Q217 153 225 153H229Q238 153 241 153T246 151T248 144Q247 138 245 128T234 90T214 43T183 6T137 -11Q101 -11 70 11T38 85Q38 97 39 102L104 360Q167 615 167 623Q167 626 166 628T162 632T157 634T149 635T141 636T132 637T122 637Q112 637 109 637T101 638T95 641T94 647Q94 649 96 661Q101 680 107 682T179 688Q194 689 213 690T243 693T254 694Q266 694 266 686Q266 675 193 386T118 83Q118 81 118 75T117 65V59Z"/></g><g data-mml-node="mn" transform="translate(298,0)"><path data-c="38" d="M70 417T70 494T124 618T248 666Q319 666 374 624T429 515Q429 485 418 459T392 417T361 389T335 371T324 363L338 354Q352 344 366 334T382 323Q457 264 457 174Q457 95 399 37T249 -22Q159 -22 101 29T43 155Q43 263 172 335L154 348Q133 361 127 368Q70 417 70 494ZM286 386L292 390Q298 394 301 396T311 403T323 413T334 425T345 438T355 454T364 471T369 491T371 513Q371 556 342 586T275 624Q268 625 242 625Q201 625 165 599T128 534Q128 511 141 492T167 463T217 431Q224 426 228 424L286 386ZM250 21Q308 21 350 55T392 137Q392 154 387 169T375 194T353 216T330 234T301 253T274 270Q260 279 244 289T218 306L210 311Q204 311 181 294T133 239T107 157Q107 98 150 60T250 21Z"/><path data-c="33" d="M127 463Q100 463 85 480T69 524Q69 579 117 622T233 665Q268 665 277 664Q351 652 390 611T430 522Q430 470 396 421T302 350L299 348Q299 347 308 345T337 336T375 315Q457 262 457 175Q457 96 395 37T238 -22Q158 -22 100 21T42 130Q42 158 60 175T105 193Q133 193 151 175T169 130Q169 119 166 110T159 94T148 82T136 74T126 70T118 67L114 66Q165 21 238 21Q293 21 321 74Q338 107 338 175V195Q338 290 274 322Q259 328 213 329L171 330L168 332Q166 335 166 348Q166 366 174 366Q202 366 232 371Q266 376 294 413T322 525V533Q322 590 287 612Q265 626 240 626Q208 626 181 615T143 592T132 580H135Q138 579 143 578T153 573T165 566T175 555T183 540T186 520Q186 498 172 481T127 463Z" transform="translate(500,0)"/></g><g data-mml-node="mi" transform="translate(1298,0)"><path data-c="1D461" d="M26 385Q19 392 19 395Q19 399 22 411T27 425Q29 430 36 430T87 431H140L159 511Q162 522 166 540T173 566T179 586T187 603T197 615T211 624T229 626Q247 625 254 615T261 596Q261 589 252 549T232 470L222 433Q222 431 272 431H323Q330 424 330 420Q330 398 317 385H210L174 240Q135 80 135 68Q135 26 162 26Q197 26 230 60T283 144Q285 150 288 151T303 153H307Q322 153 322 145Q322 142 319 133Q314 117 301 95T267 48T216 6T155 -11Q125 -11 98 4T59 56Q57 64 57 83V101L92 241Q127 382 128 383Q128 385 77 385H26Z"/></g><g data-mml-node="mn" transform="translate(1659,0)"><path data-c="30" d="M96 585Q152 666 249 666Q297 666 345 640T423 548Q460 465 460 320Q460 165 417 83Q397 41 362 16T301 -15T250 -22Q224 -22 198 -16T137 16T82 83Q39 165 39 320Q39 494 96 585ZM321 597Q291 629 250 629Q208 629 178 597Q153 571 145 525T137 333Q137 175 145 125T181 46Q209 16 250 16Q290 16 318 46Q347 76 354 130T362 333Q362 478 354 524T321 597Z"/></g></g></g></svg></mjx-container></span>(Layer:83 Type:0)</p>
+<p>对于金属层，比如M6层定义为drawing和dummy层<span class="math inline"><mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.186ex;" xmlns="http://www.w3.org/2000/svg" width="12.535ex" height="1.756ex" role="img" focusable="false" viewbox="0 -694 5540.4 776"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D459" d="M117 59Q117 26 142 26Q179 26 205 131Q211 151 215 152Q217 153 225 153H229Q238 153 241 153T246 151T248 144Q247 138 245 128T234 90T214 43T183 6T137 -11Q101 -11 70 11T38 85Q38 97 39 102L104 360Q167 615 167 623Q167 626 166 628T162 632T157 634T149 635T141 636T132 637T122 637Q112 637 109 637T101 638T95 641T94 647Q94 649 96 661Q101 680 107 682T179 688Q194 689 213 690T243 693T254 694Q266 694 266 686Q266 675 193 386T118 83Q118 81 118 75T117 65V59Z"/></g><g data-mml-node="mn" transform="translate(298,0)"><path data-c="36" d="M42 313Q42 476 123 571T303 666Q372 666 402 630T432 550Q432 525 418 510T379 495Q356 495 341 509T326 548Q326 592 373 601Q351 623 311 626Q240 626 194 566Q147 500 147 364L148 360Q153 366 156 373Q197 433 263 433H267Q313 433 348 414Q372 400 396 374T435 317Q456 268 456 210V192Q456 169 451 149Q440 90 387 34T253 -22Q225 -22 199 -14T143 16T92 75T56 172T42 313ZM257 397Q227 397 205 380T171 335T154 278T148 216Q148 133 160 97T198 39Q222 21 251 21Q302 21 329 59Q342 77 347 104T352 209Q352 289 347 316T329 361Q302 397 257 397Z"/><path data-c="36" d="M42 313Q42 476 123 571T303 666Q372 666 402 630T432 550Q432 525 418 510T379 495Q356 495 341 509T326 548Q326 592 373 601Q351 623 311 626Q240 626 194 566Q147 500 147 364L148 360Q153 366 156 373Q197 433 263 433H267Q313 433 348 414Q372 400 396 374T435 317Q456 268 456 210V192Q456 169 451 149Q440 90 387 34T253 -22Q225 -22 199 -14T143 16T92 75T56 172T42 313ZM257 397Q227 397 205 380T171 335T154 278T148 216Q148 133 160 97T198 39Q222 21 251 21Q302 21 329 59Q342 77 347 104T352 209Q352 289 347 316T329 361Q302 397 257 397Z" transform="translate(500,0)"/></g><g data-mml-node="mi" transform="translate(1298,0)"><path data-c="1D461" d="M26 385Q19 392 19 395Q19 399 22 411T27 425Q29 430 36 430T87 431H140L159 511Q162 522 166 540T173 566T179 586T187 603T197 615T211 624T229 626Q247 625 254 615T261 596Q261 589 252 549T232 470L222 433Q222 431 272 431H323Q330 424 330 420Q330 398 317 385H210L174 240Q135 80 135 68Q135 26 162 26Q197 26 230 60T283 144Q285 150 288 151T303 153H307Q322 153 322 145Q322 142 319 133Q314 117 301 95T267 48T216 6T155 -11Q125 -11 98 4T59 56Q57 64 57 83V101L92 241Q127 382 128 383Q128 385 77 385H26Z"/></g><g data-mml-node="mn" transform="translate(1659,0)"><path data-c="30" d="M96 585Q152 666 249 666Q297 666 345 640T423 548Q460 465 460 320Q460 165 417 83Q397 41 362 16T301 -15T250 -22Q224 -22 198 -16T137 16T82 83Q39 165 39 320Q39 494 96 585ZM321 597Q291 629 250 629Q208 629 178 597Q153 571 145 525T137 333Q137 175 145 125T181 46Q209 16 250 16Q290 16 318 46Q347 76 354 130T362 333Q362 478 354 524T321 597Z"/></g><g data-mml-node="mo" transform="translate(2381.2,0)"><path data-c="2B" d="M56 237T56 250T70 270H369V420L370 570Q380 583 389 583Q402 583 409 568V270H707Q722 262 722 250T707 230H409V-68Q401 -82 391 -82H389H387Q375 -82 369 -68V230H70Q56 237 56 250Z"/></g><g data-mml-node="mi" transform="translate(3381.4,0)"><path data-c="1D459" d="M117 59Q117 26 142 26Q179 26 205 131Q211 151 215 152Q217 153 225 153H229Q238 153 241 153T246 151T248 144Q247 138 245 128T234 90T214 43T183 6T137 -11Q101 -11 70 11T38 85Q38 97 39 102L104 360Q167 615 167 623Q167 626 166 628T162 632T157 634T149 635T141 636T132 637T122 637Q112 637 109 637T101 638T95 641T94 647Q94 649 96 661Q101 680 107 682T179 688Q194 689 213 690T243 693T254 694Q266 694 266 686Q266 675 193 386T118 83Q118 81 118 75T117 65V59Z"/></g><g data-mml-node="mn" transform="translate(3679.4,0)"><path data-c="36" d="M42 313Q42 476 123 571T303 666Q372 666 402 630T432 550Q432 525 418 510T379 495Q356 495 341 509T326 548Q326 592 373 601Q351 623 311 626Q240 626 194 566Q147 500 147 364L148 360Q153 366 156 373Q197 433 263 433H267Q313 433 348 414Q372 400 396 374T435 317Q456 268 456 210V192Q456 169 451 149Q440 90 387 34T253 -22Q225 -22 199 -14T143 16T92 75T56 172T42 313ZM257 397Q227 397 205 380T171 335T154 278T148 216Q148 133 160 97T198 39Q222 21 251 21Q302 21 329 59Q342 77 347 104T352 209Q352 289 347 316T329 361Q302 397 257 397Z"/><path data-c="36" d="M42 313Q42 476 123 571T303 666Q372 666 402 630T432 550Q432 525 418 510T379 495Q356 495 341 509T326 548Q326 592 373 601Q351 623 311 626Q240 626 194 566Q147 500 147 364L148 360Q153 366 156 373Q197 433 263 433H267Q313 433 348 414Q372 400 396 374T435 317Q456 268 456 210V192Q456 169 451 149Q440 90 387 34T253 -22Q225 -22 199 -14T143 16T92 75T56 172T42 313ZM257 397Q227 397 205 380T171 335T154 278T148 216Q148 133 160 97T198 39Q222 21 251 21Q302 21 329 59Q342 77 347 104T352 209Q352 289 347 316T329 361Q302 397 257 397Z" transform="translate(500,0)"/></g><g data-mml-node="mi" transform="translate(4679.4,0)"><path data-c="1D461" d="M26 385Q19 392 19 395Q19 399 22 411T27 425Q29 430 36 430T87 431H140L159 511Q162 522 166 540T173 566T179 586T187 603T197 615T211 624T229 626Q247 625 254 615T261 596Q261 589 252 549T232 470L222 433Q222 431 272 431H323Q330 424 330 420Q330 398 317 385H210L174 240Q135 80 135 68Q135 26 162 26Q197 26 230 60T283 144Q285 150 288 151T303 153H307Q322 153 322 145Q322 142 319 133Q314 117 301 95T267 48T216 6T155 -11Q125 -11 98 4T59 56Q57 64 57 83V101L92 241Q127 382 128 383Q128 385 77 385H26Z"/></g><g data-mml-node="mn" transform="translate(5040.4,0)"><path data-c="31" d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z"/></g></g></g></svg></mjx-container></span></p>
+<p>merge（）函数，比如：</p>
+<p><img src="/2025/04/15/Introduction-to-EMX/image-20250323152548262.png" alt="image-20250323152548262"></p>
+<p>代表将小于4um的过孔合并为一个层加快仿真速度。</p>
+<p>由于CT（接触）有可能与AA层（有源区）接触，也有可能与GT层（poly）接触，因而要特殊处理</p>
+<p>区分这两种过孔的技巧是，使用*（与运算）定义有源过孔dfCont以及多晶硅过孔polyCont</p>
+<h4><span id="定义介质">定义介质</span></h4>
+<p><img src="/2025/04/15/Introduction-to-EMX/image-20250323152948601.png" alt="image-20250323152948601"></p>
+<p>定义衬底，定义其厚度，介电常数，磁导率，电阻率（及其单位），这里是根据.mipt文件定义的</p>
+<p>定义电阻率时可以定义温度特性</p>
+<p>这里要特别注意layer层和conductor层的顺序，conductor层的与其<strong>上面</strong>定义的介质，两者的底面是处于同一起点的！</p>
+<p><img src="/2025/04/15/Introduction-to-EMX/image-20250323153950536.png" alt="image-20250323153950536" style="zoom:80%;"></p>
+<p>如图，GT层的底面应当与ILD1a的底面处于同一高度！</p>
+<h4><span id="定义空气层以及过孔层">定义空气层以及过孔层</span></h4>
+<p><img src="/2025/04/15/Introduction-to-EMX/image-20250323154315545.png" alt="image-20250323154315545" style="zoom:150%;"></p>
+<p>过孔的定义必须与前文的层次定义相同！</p>
+<p>上述没有考虑到工艺的偏差参数（比如长度的偏差）</p>
+<h4><span id="先进工艺的对比">先进工艺的对比</span></h4>
+<p>事实上，对于先进工艺而言，proc文件需要更细致的定义，这里以smic40nm为例：</p>
+<p>这里的.ict这是对金属m1的定义：这里定义了温度系数，电阻率，方阻（电阻率/厚度），可以看到，不同的宽度和间距</p>
+<p>对应的电阻率是不同的，相应的方阻也不同，这里还定义了扩展偏差变量<span class="math inline"><mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.464ex;" xmlns="http://www.w3.org/2000/svg" width="22.622ex" height="2.034ex" role="img" focusable="false" viewbox="0 -694 9999 899"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D464" d="M580 385Q580 406 599 424T641 443Q659 443 674 425T690 368Q690 339 671 253Q656 197 644 161T609 80T554 12T482 -11Q438 -11 404 5T355 48Q354 47 352 44Q311 -11 252 -11Q226 -11 202 -5T155 14T118 53T104 116Q104 170 138 262T173 379Q173 380 173 381Q173 390 173 393T169 400T158 404H154Q131 404 112 385T82 344T65 302T57 280Q55 278 41 278H27Q21 284 21 287Q21 293 29 315T52 366T96 418T161 441Q204 441 227 416T250 358Q250 340 217 250T184 111Q184 65 205 46T258 26Q301 26 334 87L339 96V119Q339 122 339 128T340 136T341 143T342 152T345 165T348 182T354 206T362 238T373 281Q402 395 406 404Q419 431 449 431Q468 431 475 421T483 402Q483 389 454 274T422 142Q420 131 420 107V100Q420 85 423 71T442 42T487 26Q558 26 600 148Q609 171 620 213T632 273Q632 306 619 325T593 357T580 385Z"/></g><g data-mml-node="mi" transform="translate(716,0)"><path data-c="1D456" d="M184 600Q184 624 203 642T247 661Q265 661 277 649T290 619Q290 596 270 577T226 557Q211 557 198 567T184 600ZM21 287Q21 295 30 318T54 369T98 420T158 442Q197 442 223 419T250 357Q250 340 236 301T196 196T154 83Q149 61 149 51Q149 26 166 26Q175 26 185 29T208 43T235 78T260 137Q263 149 265 151T282 153Q302 153 302 143Q302 135 293 112T268 61T223 11T161 -11Q129 -11 102 10T74 74Q74 91 79 106T122 220Q160 321 166 341T173 380Q173 404 156 404H154Q124 404 99 371T61 287Q60 286 59 284T58 281T56 279T53 278T49 278T41 278H27Q21 284 21 287Z"/></g><g data-mml-node="mi" transform="translate(1061,0)"><path data-c="1D45F" d="M21 287Q22 290 23 295T28 317T38 348T53 381T73 411T99 433T132 442Q161 442 183 430T214 408T225 388Q227 382 228 382T236 389Q284 441 347 441H350Q398 441 422 400Q430 381 430 363Q430 333 417 315T391 292T366 288Q346 288 334 299T322 328Q322 376 378 392Q356 405 342 405Q286 405 239 331Q229 315 224 298T190 165Q156 25 151 16Q138 -11 108 -11Q95 -11 87 -5T76 7T74 17Q74 30 114 189T154 366Q154 405 128 405Q107 405 92 377T68 316T57 280Q55 278 41 278H27Q21 284 21 287Z"/></g><g data-mml-node="mi" transform="translate(1512,0)"><path data-c="1D452" d="M39 168Q39 225 58 272T107 350T174 402T244 433T307 442H310Q355 442 388 420T421 355Q421 265 310 237Q261 224 176 223Q139 223 138 221Q138 219 132 186T125 128Q125 81 146 54T209 26T302 45T394 111Q403 121 406 121Q410 121 419 112T429 98T420 82T390 55T344 24T281 -1T205 -11Q126 -11 83 42T39 168ZM373 353Q367 405 305 405Q272 405 244 391T199 357T170 316T154 280T149 261Q149 260 169 260Q282 260 327 284T373 353Z"/></g><g data-mml-node="mtext" transform="translate(1978,0)"><path data-c="A0" d=""/></g><g data-mml-node="mi" transform="translate(2228,0)"><path data-c="1D452" d="M39 168Q39 225 58 272T107 350T174 402T244 433T307 442H310Q355 442 388 420T421 355Q421 265 310 237Q261 224 176 223Q139 223 138 221Q138 219 132 186T125 128Q125 81 146 54T209 26T302 45T394 111Q403 121 406 121Q410 121 419 112T429 98T420 82T390 55T344 24T281 -1T205 -11Q126 -11 83 42T39 168ZM373 353Q367 405 305 405Q272 405 244 391T199 357T170 316T154 280T149 261Q149 260 169 260Q282 260 327 284T373 353Z"/></g><g data-mml-node="mi" transform="translate(2694,0)"><path data-c="1D451" d="M366 683Q367 683 438 688T511 694Q523 694 523 686Q523 679 450 384T375 83T374 68Q374 26 402 26Q411 27 422 35Q443 55 463 131Q469 151 473 152Q475 153 483 153H487H491Q506 153 506 145Q506 140 503 129Q490 79 473 48T445 8T417 -8Q409 -10 393 -10Q359 -10 336 5T306 36L300 51Q299 52 296 50Q294 48 292 46Q233 -10 172 -10Q117 -10 75 30T33 157Q33 205 53 255T101 341Q148 398 195 420T280 442Q336 442 364 400Q369 394 369 396Q370 400 396 505T424 616Q424 629 417 632T378 637H357Q351 643 351 645T353 664Q358 683 366 683ZM352 326Q329 405 277 405Q242 405 210 374T160 293Q131 214 119 129Q119 126 119 118T118 106Q118 61 136 44T179 26Q233 26 290 98L298 109L352 326Z"/></g><g data-mml-node="mi" transform="translate(3214,0)"><path data-c="1D454" d="M311 43Q296 30 267 15T206 0Q143 0 105 45T66 160Q66 265 143 353T314 442Q361 442 401 394L404 398Q406 401 409 404T418 412T431 419T447 422Q461 422 470 413T480 394Q480 379 423 152T363 -80Q345 -134 286 -169T151 -205Q10 -205 10 -137Q10 -111 28 -91T74 -71Q89 -71 102 -80T116 -111Q116 -121 114 -130T107 -144T99 -154T92 -162L90 -164H91Q101 -167 151 -167Q189 -167 211 -155Q234 -144 254 -122T282 -75Q288 -56 298 -13Q311 35 311 43ZM384 328L380 339Q377 350 375 354T369 368T359 382T346 393T328 402T306 405Q262 405 221 352Q191 313 171 233T151 117Q151 38 213 38Q269 38 323 108L331 118L384 328Z"/></g><g data-mml-node="mi" transform="translate(3691,0)"><path data-c="1D452" d="M39 168Q39 225 58 272T107 350T174 402T244 433T307 442H310Q355 442 388 420T421 355Q421 265 310 237Q261 224 176 223Q139 223 138 221Q138 219 132 186T125 128Q125 81 146 54T209 26T302 45T394 111Q403 121 406 121Q410 121 419 112T429 98T420 82T390 55T344 24T281 -1T205 -11Q126 -11 83 42T39 168ZM373 353Q367 405 305 405Q272 405 244 391T199 357T170 316T154 280T149 261Q149 260 169 260Q282 260 327 284T373 353Z"/></g><g data-mml-node="mtext" transform="translate(4157,0)"><path data-c="A0" d=""/></g><g data-mml-node="mi" transform="translate(4407,0)"><path data-c="1D452" d="M39 168Q39 225 58 272T107 350T174 402T244 433T307 442H310Q355 442 388 420T421 355Q421 265 310 237Q261 224 176 223Q139 223 138 221Q138 219 132 186T125 128Q125 81 146 54T209 26T302 45T394 111Q403 121 406 121Q410 121 419 112T429 98T420 82T390 55T344 24T281 -1T205 -11Q126 -11 83 42T39 168ZM373 353Q367 405 305 405Q272 405 244 391T199 357T170 316T154 280T149 261Q149 260 169 260Q282 260 327 284T373 353Z"/></g><g data-mml-node="mi" transform="translate(4873,0)"><path data-c="1D45B" d="M21 287Q22 293 24 303T36 341T56 388T89 425T135 442Q171 442 195 424T225 390T231 369Q231 367 232 367L243 378Q304 442 382 442Q436 442 469 415T503 336T465 179T427 52Q427 26 444 26Q450 26 453 27Q482 32 505 65T540 145Q542 153 560 153Q580 153 580 145Q580 144 576 130Q568 101 554 73T508 17T439 -10Q392 -10 371 17T350 73Q350 92 386 193T423 345Q423 404 379 404H374Q288 404 229 303L222 291L189 157Q156 26 151 16Q138 -11 108 -11Q95 -11 87 -5T76 7T74 17Q74 30 112 180T152 343Q153 348 153 366Q153 405 129 405Q91 405 66 305Q60 285 60 284Q58 278 41 278H27Q21 284 21 287Z"/></g><g data-mml-node="mi" transform="translate(5473,0)"><path data-c="1D459" d="M117 59Q117 26 142 26Q179 26 205 131Q211 151 215 152Q217 153 225 153H229Q238 153 241 153T246 151T248 144Q247 138 245 128T234 90T214 43T183 6T137 -11Q101 -11 70 11T38 85Q38 97 39 102L104 360Q167 615 167 623Q167 626 166 628T162 632T157 634T149 635T141 636T132 637T122 637Q112 637 109 637T101 638T95 641T94 647Q94 649 96 661Q101 680 107 682T179 688Q194 689 213 690T243 693T254 694Q266 694 266 686Q266 675 193 386T118 83Q118 81 118 75T117 65V59Z"/></g><g data-mml-node="mi" transform="translate(5771,0)"><path data-c="1D44E" d="M33 157Q33 258 109 349T280 441Q331 441 370 392Q386 422 416 422Q429 422 439 414T449 394Q449 381 412 234T374 68Q374 43 381 35T402 26Q411 27 422 35Q443 55 463 131Q469 151 473 152Q475 153 483 153H487Q506 153 506 144Q506 138 501 117T481 63T449 13Q436 0 417 -8Q409 -10 393 -10Q359 -10 336 5T306 36L300 51Q299 52 296 50Q294 48 292 46Q233 -10 172 -10Q117 -10 75 30T33 157ZM351 328Q351 334 346 350T323 385T277 405Q242 405 210 374T160 293Q131 214 119 129Q119 126 119 118T118 106Q118 61 136 44T179 26Q217 26 254 59T298 110Q300 114 325 217T351 328Z"/></g><g data-mml-node="mi" transform="translate(6300,0)"><path data-c="1D45F" d="M21 287Q22 290 23 295T28 317T38 348T53 381T73 411T99 433T132 442Q161 442 183 430T214 408T225 388Q227 382 228 382T236 389Q284 441 347 441H350Q398 441 422 400Q430 381 430 363Q430 333 417 315T391 292T366 288Q346 288 334 299T322 328Q322 376 378 392Q356 405 342 405Q286 405 239 331Q229 315 224 298T190 165Q156 25 151 16Q138 -11 108 -11Q95 -11 87 -5T76 7T74 17Q74 30 114 189T154 366Q154 405 128 405Q107 405 92 377T68 316T57 280Q55 278 41 278H27Q21 284 21 287Z"/></g><g data-mml-node="mi" transform="translate(6751,0)"><path data-c="1D454" d="M311 43Q296 30 267 15T206 0Q143 0 105 45T66 160Q66 265 143 353T314 442Q361 442 401 394L404 398Q406 401 409 404T418 412T431 419T447 422Q461 422 470 413T480 394Q480 379 423 152T363 -80Q345 -134 286 -169T151 -205Q10 -205 10 -137Q10 -111 28 -91T74 -71Q89 -71 102 -80T116 -111Q116 -121 114 -130T107 -144T99 -154T92 -162L90 -164H91Q101 -167 151 -167Q189 -167 211 -155Q234 -144 254 -122T282 -75Q288 -56 298 -13Q311 35 311 43ZM384 328L380 339Q377 350 375 354T369 368T359 382T346 393T328 402T306 405Q262 405 221 352Q191 313 171 233T151 117Q151 38 213 38Q269 38 323 108L331 118L384 328Z"/></g><g data-mml-node="mi" transform="translate(7228,0)"><path data-c="1D452" d="M39 168Q39 225 58 272T107 350T174 402T244 433T307 442H310Q355 442 388 420T421 355Q421 265 310 237Q261 224 176 223Q139 223 138 221Q138 219 132 186T125 128Q125 81 146 54T209 26T302 45T394 111Q403 121 406 121Q410 121 419 112T429 98T420 82T390 55T344 24T281 -1T205 -11Q126 -11 83 42T39 168ZM373 353Q367 405 305 405Q272 405 244 391T199 357T170 316T154 280T149 261Q149 260 169 260Q282 260 327 284T373 353Z"/></g><g data-mml-node="mi" transform="translate(7694,0)"><path data-c="1D45A" d="M21 287Q22 293 24 303T36 341T56 388T88 425T132 442T175 435T205 417T221 395T229 376L231 369Q231 367 232 367L243 378Q303 442 384 442Q401 442 415 440T441 433T460 423T475 411T485 398T493 385T497 373T500 364T502 357L510 367Q573 442 659 442Q713 442 746 415T780 336Q780 285 742 178T704 50Q705 36 709 31T724 26Q752 26 776 56T815 138Q818 149 821 151T837 153Q857 153 857 145Q857 144 853 130Q845 101 831 73T785 17T716 -10Q669 -10 648 17T627 73Q627 92 663 193T700 345Q700 404 656 404H651Q565 404 506 303L499 291L466 157Q433 26 428 16Q415 -11 385 -11Q372 -11 364 -4T353 8T350 18Q350 29 384 161L420 307Q423 322 423 345Q423 404 379 404H374Q288 404 229 303L222 291L189 157Q156 26 151 16Q138 -11 108 -11Q95 -11 87 -5T76 7T74 17Q74 30 112 181Q151 335 151 342Q154 357 154 369Q154 405 129 405Q107 405 92 377T69 316T57 280Q55 278 41 278H27Q21 284 21 287Z"/></g><g data-mml-node="mi" transform="translate(8572,0)"><path data-c="1D452" d="M39 168Q39 225 58 272T107 350T174 402T244 433T307 442H310Q355 442 388 420T421 355Q421 265 310 237Q261 224 176 223Q139 223 138 221Q138 219 132 186T125 128Q125 81 146 54T209 26T302 45T394 111Q403 121 406 121Q410 121 419 112T429 98T420 82T390 55T344 24T281 -1T205 -11Q126 -11 83 42T39 168ZM373 353Q367 405 305 405Q272 405 244 391T199 357T170 316T154 280T149 261Q149 260 169 260Q282 260 327 284T373 353Z"/></g><g data-mml-node="mi" transform="translate(9038,0)"><path data-c="1D45B" d="M21 287Q22 293 24 303T36 341T56 388T89 425T135 442Q171 442 195 424T225 390T231 369Q231 367 232 367L243 378Q304 442 382 442Q436 442 469 415T503 336T465 179T427 52Q427 26 444 26Q450 26 453 27Q482 32 505 65T540 145Q542 153 560 153Q580 153 580 145Q580 144 576 130Q568 101 554 73T508 17T439 -10Q392 -10 371 17T350 73Q350 92 386 193T423 345Q423 404 379 404H374Q288 404 229 303L222 291L189 157Q156 26 151 16Q138 -11 108 -11Q95 -11 87 -5T76 7T74 17Q74 30 112 180T152 343Q153 348 153 366Q153 405 129 405Q91 405 66 305Q60 285 60 284Q58 278 41 278H27Q21 284 21 287Z"/></g><g data-mml-node="mi" transform="translate(9638,0)"><path data-c="1D461" d="M26 385Q19 392 19 395Q19 399 22 411T27 425Q29 430 36 430T87 431H140L159 511Q162 522 166 540T173 566T179 586T187 603T197 615T211 624T229 626Q247 625 254 615T261 596Q261 589 252 549T232 470L222 433Q222 431 272 431H323Q330 424 330 420Q330 398 317 385H210L174 240Q135 80 135 68Q135 26 162 26Q197 26 230 60T283 144Q285 150 288 151T303 153H307Q322 153 322 145Q322 142 319 133Q314 117 301 95T267 48T216 6T155 -11Q125 -11 98 4T59 56Q57 64 57 83V101L92 241Q127 382 128 383Q128 385 77 385H26Z"/></g></g></g></svg></mjx-container></span></p>
+<p><img src="/2025/04/15/Introduction-to-EMX/image-20250323155055004.png" alt="image-20250323155055004" style="zoom:80%;"></p>
+<p>对应的.proc文件当中：</p>
+<p><img src="/2025/04/15/Introduction-to-EMX/image-20250323155523582.png" alt="image-20250323155523582"></p>
+<p>这里的结果是<strong>方阻</strong>（最后除以了金属的厚度！）每一行是固定了宽度，改变了金属间距所得到的电阻率。</p>
+<p>并且定义了边沿的偏差带来的影响：</p>
+<p><img src="/2025/04/15/Introduction-to-EMX/image-20250323155727574.png" alt="image-20250323155727574" style="zoom:80%;"></p>
+<p>定义金属的各项参数时加入：</p>
+<p><img src="/2025/04/15/Introduction-to-EMX/image-20250323155851853.png" alt="image-20250323155851853" style="zoom:150%;"></p>
+<p>比如像m5层，使用table变量达到电阻率的计算：（M5_res为table变量）</p>
+<p><img src="/2025/04/15/Introduction-to-EMX/image-20250323160006825.png" alt="image-20250323160006825" style="zoom:150%;"></p>
+<p>对于过孔的定义，可以写成这种中括号的形式：</p>
+<p><img src="/2025/04/15/Introduction-to-EMX/image-20250323160145999.png" alt="image-20250323160145999" style="zoom:150%;"></p>
+<p>这里定义了过孔的尺寸，过孔的电阻值以及过孔材料的电阻率</p>
+<p>查看正确与否使用EMX当中的Scale即可。</p>
+<h4><span id="特殊需求的解决">特殊需求的解决</span></h4>
+<p>比如<strong>倒装工艺</strong>的解决方案：</p>
+<p><img src="/2025/04/15/Introduction-to-EMX/image-20250323160455990.png" alt="image-20250323160455990" style="zoom:67%;"></p>
+<p><img src="/2025/04/15/Introduction-to-EMX/image-20250323160510090.png" alt="image-20250323160510090" style="zoom:80%;"></p>
+<p>这里要注意顺序不能错，要考虑倒装后是否层次顺序正确。</p>
+<p><img src="/2025/04/15/Introduction-to-EMX/image-20250323160823936.png" alt="image-20250323160823936" style="zoom:80%;"></p>
+<p>这里的空气层要定义在底部。</p>
+<p><img src="/2025/04/15/Introduction-to-EMX/image-20250323160903595.png" alt="image-20250323160903595" style="zoom: 150%;"></p>
+<p><img src="/2025/04/15/Introduction-to-EMX/image-20250323160917145.png" alt="image-20250323160917145" style="zoom:150%;"></p>
+<h2><span id="lecture-v版图仿真以及黑盒的使用">Lecture Ⅴ
+版图仿真以及黑盒的使用</span></h2>
+<h3><span id="基本仿真步骤">基本仿真步骤</span></h3>
+<p>以这个圆形电感为例：</p>
+<p><img src="/2025/04/15/Introduction-to-EMX/image-20250323162941900.png" alt="image-20250323162941900" style="zoom: 80%;"></p>
+<p>这里为了防止AA,GT,M1的涡流，某些地方需要断开</p>
+<p>其参数如下：</p>
+<p><img src="/2025/04/15/Introduction-to-EMX/image-20250323163027683.png" alt="image-20250323163027683" style="zoom:80%;"></p>
+<p>首先定义信号端口：</p>
+<p><img src="/2025/04/15/Introduction-to-EMX/image-20250323164524100.png" alt="image-20250323164524100" style="zoom:80%;"></p>
+<p><img src="/2025/04/15/Introduction-to-EMX/image-20250323164547989.png" alt="image-20250323164547989" style="zoom:80%;"></p>
+<p>再将衬底连起来，在上下添加pin：</p>
+<p><img src="/2025/04/15/Introduction-to-EMX/image-20250323164708392.png" alt="image-20250323164708392" style="zoom:80%;"></p>
+<p>进行仿真设置，这里需要添加电感电容的特性，但是这样仿真量较大。</p>
+<p><img src="/2025/04/15/Introduction-to-EMX/image-20250323165014559.png" alt="image-20250323165014559" style="zoom:67%;"></p>
+<p>最终得到电感的结果：</p>
+<p><img src="/2025/04/15/Introduction-to-EMX/image-20250323165458668.png" alt="image-20250323165458668" style="zoom:67%;"></p>
+<p>可见感值结果相近，而Q值相差较大，从已有的工程经验来看，这个结果是可信的。</p>
+<p>再进行模型的拟合，可见拟合效果较好。</p>
+<p><img src="/2025/04/15/Introduction-to-EMX/image-20250323165844510.png" alt="image-20250323165844510" style="zoom:67%;"></p>
+<p>拟合出来的模型：</p>
+<p><img src="/2025/04/15/Introduction-to-EMX/image-20250323165943185.png" alt="image-20250323165943185" style="zoom:67%;"></p>
+<p><img src="/2025/04/15/Introduction-to-EMX/image-20250323170055353.png" alt="image-20250323170055353" style="zoom:50%;"></p>
+<p><strong>接下来，使用得到的spara进行仿真</strong>：</p>
+<p>首先建立电感的testbench，在其中新建config文件，并选用spectre作为模板：：</p>
+<p><img src="/2025/04/15/Introduction-to-EMX/image-20250323170818549.png" alt="image-20250323170818549" style="zoom:67%;"></p>
+<p>将schemetic替换为nport并保存：</p>
+<p><img src="/2025/04/15/Introduction-to-EMX/image-20250323171109337.png" alt="image-20250323171109337" style="zoom:67%;"></p>
+<p>打开config文件，选择原理图查看，读取子电路发现确实是nport的模型。</p>
+<p><img src="/2025/04/15/Introduction-to-EMX/image-20250323171217744.png" alt="image-20250323171217744" style="zoom:67%;"></p>
+<h3><span id="解决lvs检查不通过的方法-黑盒屏蔽">解决LVS检查不通过的方法--黑盒屏蔽</span></h3>
+<p>屏蔽方法可以将有源电路和无源部分分开，方便对无源电路进行仿真。</p>
+<p><img src="/2025/04/15/Introduction-to-EMX/image-20250323171906515.png" alt="image-20250323171906515" style="zoom:80%;"></p>
+<p>进行仿真，loadstate的时候不要勾选model setup!</p>
+<p><img src="/2025/04/15/Introduction-to-EMX/image-20250323172152204.png" alt="image-20250323172152204" style="zoom:67%;"></p>
+<p>得到AC仿真的结果（单端输入，差分输出）：</p>
+<p><img src="/2025/04/15/Introduction-to-EMX/image-20250323172232210.png" alt="image-20250323172232210" style="zoom:50%;"></p>
+<p>得到sp仿真的结果：</p>
+<p><img src="/2025/04/15/Introduction-to-EMX/image-20250323172357335.png" alt="image-20250323172357335" style="zoom:67%;"></p>
+<p>匹配情况（Z-Smith)</p>
+<p><img src="/2025/04/15/Introduction-to-EMX/image-20250323172428915.png" alt="image-20250323172428915" style="zoom:67%;"></p>
+<p>现在讨论不让器件生成网表以至于过不了LVS的情况：</p>
+<p>首先选中巴伦，选中Edit-cellview将参数增加，注意nlAction不要写错了！</p>
+<p><img src="/2025/04/15/Introduction-to-EMX/image-20250323211542305.png" alt="image-20250323211542305" style="zoom:67%;"></p>
+<p>根据layout短接其它的端口，但是正端和负端不能直接短接，方法是在两个输入之间接一个电阻</p>
+<p><img src="/2025/04/15/Introduction-to-EMX/image-20250414202049230.png" alt="image-20250414202049230" style="zoom:80%;"></p>
+<p>设置黑盒子将LNA的版图全部屏蔽掉：</p>
+<p><img src="/2025/04/15/Introduction-to-EMX/image-20250323212558464.png" alt="image-20250323212558464" style="zoom:80%;"></p>
+<p><img src="/2025/04/15/Introduction-to-EMX/image-20250323212459822.png" alt="image-20250323212459822" style="zoom:67%;"></p>
+<h2><span id="lab使用rfic_gptemx对电感进行仿真">Lab：使用RFIC_GPT+EMX对电感进行仿真</span></h2>
+<h4><span id="使用pdk进行电感的仿真28ghz">使用PDK进行电感的仿真（28GHz）</span></h4>
+<p>从PDK中提取两个电感，其中一个为多圈电感，电感值在2nH左右，另一个为单圈电感，电感量在200ph左右，将其版图化简，导入电磁场仿真工具中进行仿真，将仿真得到的S参数与PDK的仿真结果进行对比，分别在一张图上画出电感量和Q值随频率得对比曲线。</p>
+<p>培训报告中提交HFSS模型文件和仿真结果对比图。</p>
+<p>首先使用工艺库当中的电感进行仿真，其参数如下图所示：</p>
+<p><img src="/2025/04/15/Introduction-to-EMX/image-20250414150927361.png" alt="image-20250414150927361" style="zoom: 67%;"></p>
+<p>如上图有：<span class="math inline"><mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.186ex;" xmlns="http://www.w3.org/2000/svg" width="13.078ex" height="1.731ex" role="img" focusable="false" viewbox="0 -683 5780.6 765"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D43F" d="M228 637Q194 637 192 641Q191 643 191 649Q191 673 202 682Q204 683 217 683Q271 680 344 680Q485 680 506 683H518Q524 677 524 674T522 656Q517 641 513 637H475Q406 636 394 628Q387 624 380 600T313 336Q297 271 279 198T252 88L243 52Q243 48 252 48T311 46H328Q360 46 379 47T428 54T478 72T522 106T564 161Q580 191 594 228T611 270Q616 273 628 273H641Q647 264 647 262T627 203T583 83T557 9Q555 4 553 3T537 0T494 -1Q483 -1 418 -1T294 0H116Q32 0 32 10Q32 17 34 24Q39 43 44 45Q48 46 59 46H65Q92 46 125 49Q139 52 144 61Q147 65 216 339T285 628Q285 635 228 637Z"/></g><g data-mml-node="mo" transform="translate(958.8,0)"><path data-c="3D" d="M56 347Q56 360 70 367H707Q722 359 722 347Q722 336 708 328L390 327H72Q56 332 56 347ZM56 153Q56 168 72 173H708Q722 163 722 153Q722 140 707 133H70Q56 140 56 153Z"/></g><g data-mml-node="mn" transform="translate(2014.6,0)"><path data-c="32" d="M109 429Q82 429 66 447T50 491Q50 562 103 614T235 666Q326 666 387 610T449 465Q449 422 429 383T381 315T301 241Q265 210 201 149L142 93L218 92Q375 92 385 97Q392 99 409 186V189H449V186Q448 183 436 95T421 3V0H50V19V31Q50 38 56 46T86 81Q115 113 136 137Q145 147 170 174T204 211T233 244T261 278T284 308T305 340T320 369T333 401T340 431T343 464Q343 527 309 573T212 619Q179 619 154 602T119 569T109 550Q109 549 114 549Q132 549 151 535T170 489Q170 464 154 447T109 429Z"/><path data-c="2E" d="M78 60Q78 84 95 102T138 120Q162 120 180 104T199 61Q199 36 182 18T139 0T96 17T78 60Z" transform="translate(500,0)"/><path data-c="32" d="M109 429Q82 429 66 447T50 491Q50 562 103 614T235 666Q326 666 387 610T449 465Q449 422 429 383T381 315T301 241Q265 210 201 149L142 93L218 92Q375 92 385 97Q392 99 409 186V189H449V186Q448 183 436 95T421 3V0H50V19V31Q50 38 56 46T86 81Q115 113 136 137Q145 147 170 174T204 211T233 244T261 278T284 308T305 340T320 369T333 401T340 431T343 464Q343 527 309 573T212 619Q179 619 154 602T119 569T109 550Q109 549 114 549Q132 549 151 535T170 489Q170 464 154 447T109 429Z" transform="translate(778,0)"/><path data-c="38" d="M70 417T70 494T124 618T248 666Q319 666 374 624T429 515Q429 485 418 459T392 417T361 389T335 371T324 363L338 354Q352 344 366 334T382 323Q457 264 457 174Q457 95 399 37T249 -22Q159 -22 101 29T43 155Q43 263 172 335L154 348Q133 361 127 368Q70 417 70 494ZM286 386L292 390Q298 394 301 396T311 403T323 413T334 425T345 438T355 454T364 471T369 491T371 513Q371 556 342 586T275 624Q268 625 242 625Q201 625 165 599T128 534Q128 511 141 492T167 463T217 431Q224 426 228 424L286 386ZM250 21Q308 21 350 55T392 137Q392 154 387 169T375 194T353 216T330 234T301 253T274 270Q260 279 244 289T218 306L210 311Q204 311 181 294T133 239T107 157Q107 98 150 60T250 21Z" transform="translate(1278,0)"/><path data-c="37" d="M55 458Q56 460 72 567L88 674Q88 676 108 676H128V672Q128 662 143 655T195 646T364 644H485V605L417 512Q408 500 387 472T360 435T339 403T319 367T305 330T292 284T284 230T278 162T275 80Q275 66 275 52T274 28V19Q270 2 255 -10T221 -22Q210 -22 200 -19T179 0T168 40Q168 198 265 368Q285 400 349 489L395 552H302Q128 552 119 546Q113 543 108 522T98 479L95 458V455H55V458Z" transform="translate(1778,0)"/></g><g data-mml-node="mi" transform="translate(4292.6,0)"><path data-c="1D45B" d="M21 287Q22 293 24 303T36 341T56 388T89 425T135 442Q171 442 195 424T225 390T231 369Q231 367 232 367L243 378Q304 442 382 442Q436 442 469 415T503 336T465 179T427 52Q427 26 444 26Q450 26 453 27Q482 32 505 65T540 145Q542 153 560 153Q580 153 580 145Q580 144 576 130Q568 101 554 73T508 17T439 -10Q392 -10 371 17T350 73Q350 92 386 193T423 345Q423 404 379 404H374Q288 404 229 303L222 291L189 157Q156 26 151 16Q138 -11 108 -11Q95 -11 87 -5T76 7T74 17Q74 30 112 180T152 343Q153 348 153 366Q153 405 129 405Q91 405 66 305Q60 285 60 284Q58 278 41 278H27Q21 284 21 287Z"/></g><g data-mml-node="mi" transform="translate(4892.6,0)"><path data-c="1D43B" d="M228 637Q194 637 192 641Q191 643 191 649Q191 673 202 682Q204 683 219 683Q260 681 355 681Q389 681 418 681T463 682T483 682Q499 682 499 672Q499 670 497 658Q492 641 487 638H485Q483 638 480 638T473 638T464 637T455 637Q416 636 405 634T387 623Q384 619 355 500Q348 474 340 442T328 395L324 380Q324 378 469 378H614L615 381Q615 384 646 504Q674 619 674 627T617 637Q594 637 587 639T580 648Q580 650 582 660Q586 677 588 679T604 682Q609 682 646 681T740 680Q802 680 835 681T871 682Q888 682 888 672Q888 645 876 638H874Q872 638 869 638T862 638T853 637T844 637Q805 636 794 634T776 623Q773 618 704 340T634 58Q634 51 638 51Q646 48 692 46H723Q729 38 729 37T726 19Q722 6 716 0H701Q664 2 567 2Q533 2 504 2T458 2T437 1Q420 1 420 10Q420 15 423 24Q428 43 433 45Q437 46 448 46H454Q481 46 514 49Q520 50 522 50T528 55T534 64T540 82T547 110T558 153Q565 181 569 198Q602 330 602 331T457 332H312L279 197Q245 63 245 58Q245 51 253 49T303 46H334Q340 38 340 37T337 19Q333 6 327 0H312Q275 2 178 2Q144 2 115 2T69 2T48 1Q31 1 31 10Q31 12 34 24Q39 43 44 45Q48 46 59 46H65Q92 46 125 49Q139 52 144 61Q147 65 216 339T285 628Q285 635 228 637Z"/></g></g></g></svg></mjx-container></span>,<span class="math inline"><mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.439ex;" xmlns="http://www.w3.org/2000/svg" width="11.092ex" height="2.032ex" role="img" focusable="false" viewbox="0 -704 4902.6 898"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D444" d="M399 -80Q399 -47 400 -30T402 -11V-7L387 -11Q341 -22 303 -22Q208 -22 138 35T51 201Q50 209 50 244Q50 346 98 438T227 601Q351 704 476 704Q514 704 524 703Q621 689 680 617T740 435Q740 255 592 107Q529 47 461 16L444 8V3Q444 2 449 -24T470 -66T516 -82Q551 -82 583 -60T625 -3Q631 11 638 11Q647 11 649 2Q649 -6 639 -34T611 -100T557 -165T481 -194Q399 -194 399 -87V-80ZM636 468Q636 523 621 564T580 625T530 655T477 665Q429 665 379 640Q277 591 215 464T153 216Q153 110 207 59Q231 38 236 38V46Q236 86 269 120T347 155Q372 155 390 144T417 114T429 82T435 55L448 64Q512 108 557 185T619 334T636 468ZM314 18Q362 18 404 39L403 49Q399 104 366 115Q354 117 347 117Q344 117 341 117T337 118Q317 118 296 98T274 52Q274 18 314 18Z"/></g><g data-mml-node="mo" transform="translate(1068.8,0)"><path data-c="3D" d="M56 347Q56 360 70 367H707Q722 359 722 347Q722 336 708 328L390 327H72Q56 332 56 347ZM56 153Q56 168 72 173H708Q722 163 722 153Q722 140 707 133H70Q56 140 56 153Z"/></g><g data-mml-node="mn" transform="translate(2124.6,0)"><path data-c="31" d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z"/><path data-c="34" d="M462 0Q444 3 333 3Q217 3 199 0H190V46H221Q241 46 248 46T265 48T279 53T286 61Q287 63 287 115V165H28V211L179 442Q332 674 334 675Q336 677 355 677H373L379 671V211H471V165H379V114Q379 73 379 66T385 54Q393 47 442 46H471V0H462ZM293 211V545L74 212L183 211H293Z" transform="translate(500,0)"/><path data-c="2E" d="M78 60Q78 84 95 102T138 120Q162 120 180 104T199 61Q199 36 182 18T139 0T96 17T78 60Z" transform="translate(1000,0)"/><path data-c="36" d="M42 313Q42 476 123 571T303 666Q372 666 402 630T432 550Q432 525 418 510T379 495Q356 495 341 509T326 548Q326 592 373 601Q351 623 311 626Q240 626 194 566Q147 500 147 364L148 360Q153 366 156 373Q197 433 263 433H267Q313 433 348 414Q372 400 396 374T435 317Q456 268 456 210V192Q456 169 451 149Q440 90 387 34T253 -22Q225 -22 199 -14T143 16T92 75T56 172T42 313ZM257 397Q227 397 205 380T171 335T154 278T148 216Q148 133 160 97T198 39Q222 21 251 21Q302 21 329 59Q342 77 347 104T352 209Q352 289 347 316T329 361Q302 397 257 397Z" transform="translate(1278,0)"/><path data-c="37" d="M55 458Q56 460 72 567L88 674Q88 676 108 676H128V672Q128 662 143 655T195 646T364 644H485V605L417 512Q408 500 387 472T360 435T339 403T319 367T305 330T292 284T284 230T278 162T275 80Q275 66 275 52T274 28V19Q270 2 255 -10T221 -22Q210 -22 200 -19T179 0T168 40Q168 198 265 368Q285 400 349 489L395 552H302Q128 552 119 546Q113 543 108 522T98 479L95 458V455H55V458Z" transform="translate(1778,0)"/><path data-c="38" d="M70 417T70 494T124 618T248 666Q319 666 374 624T429 515Q429 485 418 459T392 417T361 389T335 371T324 363L338 354Q352 344 366 334T382 323Q457 264 457 174Q457 95 399 37T249 -22Q159 -22 101 29T43 155Q43 263 172 335L154 348Q133 361 127 368Q70 417 70 494ZM286 386L292 390Q298 394 301 396T311 403T323 413T334 425T345 438T355 454T364 471T369 491T371 513Q371 556 342 586T275 624Q268 625 242 625Q201 625 165 599T128 534Q128 511 141 492T167 463T217 431Q224 426 228 424L286 386ZM250 21Q308 21 350 55T392 137Q392 154 387 169T375 194T353 216T330 234T301 253T274 270Q260 279 244 289T218 306L210 311Q204 311 181 294T133 239T107 157Q107 98 150 60T250 21Z" transform="translate(2278,0)"/></g></g></g></svg></mjx-container></span></p>
+<p>使用EMX仿真如下图所示：</p>
+<p><img src="/2025/04/15/Introduction-to-EMX/image-20250414150904488.png" alt="image-20250414150904488" style="zoom:50%;"></p>
+<p>可见其仿真结果为：<span class="math inline"><mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.439ex;" xmlns="http://www.w3.org/2000/svg" width="24.045ex" height="2.032ex" role="img" focusable="false" viewbox="0 -704 10627.8 898"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D43F" d="M228 637Q194 637 192 641Q191 643 191 649Q191 673 202 682Q204 683 217 683Q271 680 344 680Q485 680 506 683H518Q524 677 524 674T522 656Q517 641 513 637H475Q406 636 394 628Q387 624 380 600T313 336Q297 271 279 198T252 88L243 52Q243 48 252 48T311 46H328Q360 46 379 47T428 54T478 72T522 106T564 161Q580 191 594 228T611 270Q616 273 628 273H641Q647 264 647 262T627 203T583 83T557 9Q555 4 553 3T537 0T494 -1Q483 -1 418 -1T294 0H116Q32 0 32 10Q32 17 34 24Q39 43 44 45Q48 46 59 46H65Q92 46 125 49Q139 52 144 61Q147 65 216 339T285 628Q285 635 228 637Z"/></g><g data-mml-node="mo" transform="translate(958.8,0)"><path data-c="3D" d="M56 347Q56 360 70 367H707Q722 359 722 347Q722 336 708 328L390 327H72Q56 332 56 347ZM56 153Q56 168 72 173H708Q722 163 722 153Q722 140 707 133H70Q56 140 56 153Z"/></g><g data-mml-node="mn" transform="translate(2014.6,0)"><path data-c="32" d="M109 429Q82 429 66 447T50 491Q50 562 103 614T235 666Q326 666 387 610T449 465Q449 422 429 383T381 315T301 241Q265 210 201 149L142 93L218 92Q375 92 385 97Q392 99 409 186V189H449V186Q448 183 436 95T421 3V0H50V19V31Q50 38 56 46T86 81Q115 113 136 137Q145 147 170 174T204 211T233 244T261 278T284 308T305 340T320 369T333 401T340 431T343 464Q343 527 309 573T212 619Q179 619 154 602T119 569T109 550Q109 549 114 549Q132 549 151 535T170 489Q170 464 154 447T109 429Z"/><path data-c="2E" d="M78 60Q78 84 95 102T138 120Q162 120 180 104T199 61Q199 36 182 18T139 0T96 17T78 60Z" transform="translate(500,0)"/><path data-c="32" d="M109 429Q82 429 66 447T50 491Q50 562 103 614T235 666Q326 666 387 610T449 465Q449 422 429 383T381 315T301 241Q265 210 201 149L142 93L218 92Q375 92 385 97Q392 99 409 186V189H449V186Q448 183 436 95T421 3V0H50V19V31Q50 38 56 46T86 81Q115 113 136 137Q145 147 170 174T204 211T233 244T261 278T284 308T305 340T320 369T333 401T340 431T343 464Q343 527 309 573T212 619Q179 619 154 602T119 569T109 550Q109 549 114 549Q132 549 151 535T170 489Q170 464 154 447T109 429Z" transform="translate(778,0)"/><path data-c="35" d="M164 157Q164 133 148 117T109 101H102Q148 22 224 22Q294 22 326 82Q345 115 345 210Q345 313 318 349Q292 382 260 382H254Q176 382 136 314Q132 307 129 306T114 304Q97 304 95 310Q93 314 93 485V614Q93 664 98 664Q100 666 102 666Q103 666 123 658T178 642T253 634Q324 634 389 662Q397 666 402 666Q410 666 410 648V635Q328 538 205 538Q174 538 149 544L139 546V374Q158 388 169 396T205 412T256 420Q337 420 393 355T449 201Q449 109 385 44T229 -22Q148 -22 99 32T50 154Q50 178 61 192T84 210T107 214Q132 214 148 197T164 157Z" transform="translate(1278,0)"/><path data-c="36" d="M42 313Q42 476 123 571T303 666Q372 666 402 630T432 550Q432 525 418 510T379 495Q356 495 341 509T326 548Q326 592 373 601Q351 623 311 626Q240 626 194 566Q147 500 147 364L148 360Q153 366 156 373Q197 433 263 433H267Q313 433 348 414Q372 400 396 374T435 317Q456 268 456 210V192Q456 169 451 149Q440 90 387 34T253 -22Q225 -22 199 -14T143 16T92 75T56 172T42 313ZM257 397Q227 397 205 380T171 335T154 278T148 216Q148 133 160 97T198 39Q222 21 251 21Q302 21 329 59Q342 77 347 104T352 209Q352 289 347 316T329 361Q302 397 257 397Z" transform="translate(1778,0)"/></g><g data-mml-node="mi" transform="translate(4292.6,0)"><path data-c="1D45B" d="M21 287Q22 293 24 303T36 341T56 388T89 425T135 442Q171 442 195 424T225 390T231 369Q231 367 232 367L243 378Q304 442 382 442Q436 442 469 415T503 336T465 179T427 52Q427 26 444 26Q450 26 453 27Q482 32 505 65T540 145Q542 153 560 153Q580 153 580 145Q580 144 576 130Q568 101 554 73T508 17T439 -10Q392 -10 371 17T350 73Q350 92 386 193T423 345Q423 404 379 404H374Q288 404 229 303L222 291L189 157Q156 26 151 16Q138 -11 108 -11Q95 -11 87 -5T76 7T74 17Q74 30 112 180T152 343Q153 348 153 366Q153 405 129 405Q91 405 66 305Q60 285 60 284Q58 278 41 278H27Q21 284 21 287Z"/></g><g data-mml-node="mi" transform="translate(4892.6,0)"><path data-c="1D43B" d="M228 637Q194 637 192 641Q191 643 191 649Q191 673 202 682Q204 683 219 683Q260 681 355 681Q389 681 418 681T463 682T483 682Q499 682 499 672Q499 670 497 658Q492 641 487 638H485Q483 638 480 638T473 638T464 637T455 637Q416 636 405 634T387 623Q384 619 355 500Q348 474 340 442T328 395L324 380Q324 378 469 378H614L615 381Q615 384 646 504Q674 619 674 627T617 637Q594 637 587 639T580 648Q580 650 582 660Q586 677 588 679T604 682Q609 682 646 681T740 680Q802 680 835 681T871 682Q888 682 888 672Q888 645 876 638H874Q872 638 869 638T862 638T853 637T844 637Q805 636 794 634T776 623Q773 618 704 340T634 58Q634 51 638 51Q646 48 692 46H723Q729 38 729 37T726 19Q722 6 716 0H701Q664 2 567 2Q533 2 504 2T458 2T437 1Q420 1 420 10Q420 15 423 24Q428 43 433 45Q437 46 448 46H454Q481 46 514 49Q520 50 522 50T528 55T534 64T540 82T547 110T558 153Q565 181 569 198Q602 330 602 331T457 332H312L279 197Q245 63 245 58Q245 51 253 49T303 46H334Q340 38 340 37T337 19Q333 6 327 0H312Q275 2 178 2Q144 2 115 2T69 2T48 1Q31 1 31 10Q31 12 34 24Q39 43 44 45Q48 46 59 46H65Q92 46 125 49Q139 52 144 61Q147 65 216 339T285 628Q285 635 228 637Z"/></g><g data-mml-node="mo" transform="translate(5780.6,0)"><path data-c="2C" d="M78 35T78 60T94 103T137 121Q165 121 187 96T210 8Q210 -27 201 -60T180 -117T154 -158T130 -185T117 -194Q113 -194 104 -185T95 -172Q95 -168 106 -156T131 -126T157 -76T173 -3V9L172 8Q170 7 167 6T161 3T152 1T140 0Q113 0 96 17Z"/></g><g data-mml-node="mi" transform="translate(6225.2,0)"><path data-c="1D444" d="M399 -80Q399 -47 400 -30T402 -11V-7L387 -11Q341 -22 303 -22Q208 -22 138 35T51 201Q50 209 50 244Q50 346 98 438T227 601Q351 704 476 704Q514 704 524 703Q621 689 680 617T740 435Q740 255 592 107Q529 47 461 16L444 8V3Q444 2 449 -24T470 -66T516 -82Q551 -82 583 -60T625 -3Q631 11 638 11Q647 11 649 2Q649 -6 639 -34T611 -100T557 -165T481 -194Q399 -194 399 -87V-80ZM636 468Q636 523 621 564T580 625T530 655T477 665Q429 665 379 640Q277 591 215 464T153 216Q153 110 207 59Q231 38 236 38V46Q236 86 269 120T347 155Q372 155 390 144T417 114T429 82T435 55L448 64Q512 108 557 185T619 334T636 468ZM314 18Q362 18 404 39L403 49Q399 104 366 115Q354 117 347 117Q344 117 341 117T337 118Q317 118 296 98T274 52Q274 18 314 18Z"/></g><g data-mml-node="mo" transform="translate(7294,0)"><path data-c="3D" d="M56 347Q56 360 70 367H707Q722 359 722 347Q722 336 708 328L390 327H72Q56 332 56 347ZM56 153Q56 168 72 173H708Q722 163 722 153Q722 140 707 133H70Q56 140 56 153Z"/></g><g data-mml-node="mn" transform="translate(8349.8,0)"><path data-c="31" d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z"/><path data-c="35" d="M164 157Q164 133 148 117T109 101H102Q148 22 224 22Q294 22 326 82Q345 115 345 210Q345 313 318 349Q292 382 260 382H254Q176 382 136 314Q132 307 129 306T114 304Q97 304 95 310Q93 314 93 485V614Q93 664 98 664Q100 666 102 666Q103 666 123 658T178 642T253 634Q324 634 389 662Q397 666 402 666Q410 666 410 648V635Q328 538 205 538Q174 538 149 544L139 546V374Q158 388 169 396T205 412T256 420Q337 420 393 355T449 201Q449 109 385 44T229 -22Q148 -22 99 32T50 154Q50 178 61 192T84 210T107 214Q132 214 148 197T164 157Z" transform="translate(500,0)"/><path data-c="2E" d="M78 60Q78 84 95 102T138 120Q162 120 180 104T199 61Q199 36 182 18T139 0T96 17T78 60Z" transform="translate(1000,0)"/><path data-c="30" d="M96 585Q152 666 249 666Q297 666 345 640T423 548Q460 465 460 320Q460 165 417 83Q397 41 362 16T301 -15T250 -22Q224 -22 198 -16T137 16T82 83Q39 165 39 320Q39 494 96 585ZM321 597Q291 629 250 629Q208 629 178 597Q153 571 145 525T137 333Q137 175 145 125T181 46Q209 16 250 16Q290 16 318 46Q347 76 354 130T362 333Q362 478 354 524T321 597Z" transform="translate(1278,0)"/><path data-c="38" d="M70 417T70 494T124 618T248 666Q319 666 374 624T429 515Q429 485 418 459T392 417T361 389T335 371T324 363L338 354Q352 344 366 334T382 323Q457 264 457 174Q457 95 399 37T249 -22Q159 -22 101 29T43 155Q43 263 172 335L154 348Q133 361 127 368Q70 417 70 494ZM286 386L292 390Q298 394 301 396T311 403T323 413T334 425T345 438T355 454T364 471T369 491T371 513Q371 556 342 586T275 624Q268 625 242 625Q201 625 165 599T128 534Q128 511 141 492T167 463T217 431Q224 426 228 424L286 386ZM250 21Q308 21 350 55T392 137Q392 154 387 169T375 194T353 216T330 234T301 253T274 270Q260 279 244 289T218 306L210 311Q204 311 181 294T133 239T107 157Q107 98 150 60T250 21Z" transform="translate(1778,0)"/></g></g></g></svg></mjx-container></span>
+与工艺库当中的结果大致相同。</p>
+<p>下面对比了几款仿真软件对于同一个电感的仿真：首先使用RFIC_GPT和HFSS进行仿真：</p>
+<p><img src="/2025/04/15/Introduction-to-EMX/image-20250323213618660.png" alt="image-20250323213618660" style="zoom:67%;"></p>
+<p><img src="/2025/04/15/Introduction-to-EMX/image-20250414152542644.png" alt="image-20250414152542644" style="zoom:67%;"></p>
+<p><img src="/2025/04/15/Introduction-to-EMX/image-20250323235922107.png" alt="image-20250323235922107" style="zoom:50%;"></p>
+<p>Cadence进行sp仿真如下：<img src="/2025/04/15/Introduction-to-EMX/image-20250324000132913.png" alt="image-20250324000132913" style="zoom:80%;"></p>
+<p><img src="/2025/04/15/Introduction-to-EMX/image-20250324000115118.png" alt="image-20250324000115118" style="zoom:50%;"></p>
+<p>再使用EMX进行仿真：</p>
+<p><img src="/2025/04/15/Introduction-to-EMX/image-20250414152157611.png" alt="image-20250414152157611" style="zoom:50%;"></p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2025/03/12/%E7%A1%85%E5%9F%BA%E5%A4%AA%E8%B5%AB%E5%85%B9%E6%BA%90%E6%8A%A5%E5%91%8A/" rel="next" title="硅基太赫兹源报告">
+                <i class="fa fa-chevron-left"></i> 硅基太赫兹源报告
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2025/04/20/RF-BlueTooth-Design/" rel="prev" title="RF_BlueTooth_Design">
+                RF_BlueTooth_Design <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+      <div id="sidebar-dimmer"></div>
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/header.png"
+                alt="" />
+            
+              <p class="site-author-name" itemprop="name"></p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/%7C%7C%20archive">
+              
+                  <span class="site-state-item-count">8</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-name">categories</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-name">tags</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/baikal2411" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:3024161302@qq.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+
+      
+        <div class="back-to-top">
+          <i class="fa fa-arrow-up"></i>
+          
+            <span id="scrollpercent"><span>0</span>%</span>
+          
+        </div>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2025</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Liyuan Zha</span>
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+      <span class="post-meta-item-text">站内总字数&#58;</span>
+    
+    <span title="站内总字数">27.3k</span>
+  
+</div>
+
+
+
+
+
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src=""></script>
+  
+
+
+  
+
+  
+
+</body>
+</html>

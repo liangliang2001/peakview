@@ -40,6 +40,8 @@ load("/tmp/virtuoso_bridge_zhaoliang_2/virtuoso_bridge/virtuoso_setup.il")
 
 ## Study Notes
 
+- [Authorized, editable full copy of "Introduction to EMX"](docs/emx_full_copy/article.md)
+- [Full-copy inventory and authorization note](docs/emx_full_copy/README.md)
 - [EMX learning notes from "Introduction to EMX"](docs/emx_introduction_learning_notes.md)
 - [EMX source preservation and recovery links](docs/emx_source_preservation.md)
 

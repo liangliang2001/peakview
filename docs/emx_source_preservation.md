@@ -33,12 +33,18 @@ These headings, links, author details, date, and the attributed summary in
 `emx_introduction_learning_notes.md` are sufficient to identify the original
 page if its URL changes.
 
-## Copyright And Recovery
+## Authorization, Copyright, And Recovery
 
 The source page displays an author copyright notice but no explicit
-redistribution license was found during the 2026-07-23 review. For that reason,
-this public repository stores an attributed summary and retrieval metadata
-rather than a verbatim mirror of the article and screenshots.
+redistribution license was found during the 2026-07-23 review. Later on
+2026-07-23, the `peakview_tool` repository maintainer reported obtaining direct
+permission from the author to copy and modify the article. The repository
+therefore stores an attributed full copy while retaining the original source
+link:
+
+- [Editable authorized copy](emx_full_copy/article.md)
+- [Original generated HTML snapshot](emx_full_copy/site/index.html)
+- [Mirror inventory and authorization note](emx_full_copy/README.md)
 
 If the original page becomes unavailable:
 
@@ -47,7 +53,4 @@ If the original page becomes unavailable:
 2. Search the author's site archive for the exact title and publication date.
 3. Search the author's GitHub repositories for the title or the post slug
    `Introduction-to-EMX`.
-4. Use the detailed learning notes in this directory as the working reference.
-
-The complete article may be added to this repository later if the author grants
-permission or publishes it under a license that allows redistribution.
+4. Use the authorized local copy or detailed learning notes in this directory.
